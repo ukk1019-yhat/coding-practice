@@ -1,0 +1,42 @@
+{
+  "id": "regular_expression_matching",
+  "title": "Regular Expression Matching",
+  "difficulty": "hard",
+  "description": "Solve the **Regular Expression Matching** problem on LeetCode.\n\nFunction signature: `def is_match(s: str, p: str) -> bool:`",
+  "function_name": "is_match",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    },
+    {
+      "name": "p",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_match(s: str, p: str) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "aa",
+        "p": "a"
+      },
+      "expected": false
+    },
+    {
+      "input": {
+        "s": "aa",
+        "p": "a*"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "ab",
+        "p": ".*"
+      },
+      "expected": true
+    }
+  ]
+}

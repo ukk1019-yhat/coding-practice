@@ -1,0 +1,55 @@
+{
+  "id": "gas_station",
+  "title": "Gas Station",
+  "difficulty": "medium",
+  "description": "Solve the **Gas Station** problem on LeetCode.\n\nFunction signature: `def can_complete_circuit(gas: list[int], cost: list[int]) -> int:`",
+  "function_name": "can_complete_circuit",
+  "params": [
+    {
+      "name": "gas",
+      "type": "list[int]"
+    },
+    {
+      "name": "cost",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def can_complete_circuit(gas: list[int], cost: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "gas": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cost": [
+          3,
+          4,
+          5,
+          1,
+          2
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "gas": [
+          2,
+          3,
+          4
+        ],
+        "cost": [
+          3,
+          4,
+          3
+        ]
+      },
+      "expected": -1
+    }
+  ]
+}

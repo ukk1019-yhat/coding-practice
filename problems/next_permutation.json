@@ -1,0 +1,16 @@
+{
+  "id": "next_permutation",
+  "title": "Next Permutation",
+  "difficulty": "medium",
+  "description": "Solve the **Next Permutation** problem on LeetCode.\n\nFunction signature: `def next_permutation(nums: list[int]) -> None:`",
+  "function_name": "next_permutation",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def next_permutation(nums: list[int]) -> None:\n    \"\"\"Modify nums in-place.\"\"\"\n    pass",
+  "test_cases": []
+}

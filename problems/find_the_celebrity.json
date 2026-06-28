@@ -1,0 +1,16 @@
+{
+  "id": "find_the_celebrity",
+  "title": "Find the Celebrity",
+  "difficulty": "medium",
+  "description": "Solve the **Find the Celebrity** problem on LeetCode.\n\nFunction signature: `def find_celebrity(n: int) -> int:`",
+  "function_name": "find_celebrity",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def find_celebrity(n: int) -> int:\n    \"\"\"You have access to knows(a, b) function.\"\"\"\n    pass",
+  "test_cases": []
+}

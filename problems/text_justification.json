@@ -1,0 +1,20 @@
+{
+  "id": "text_justification",
+  "title": "Text Justification",
+  "difficulty": "hard",
+  "description": "Solve the **Text Justification** problem on LeetCode.\n\nFunction signature: `def full_justify(words: list[str], max_width: int) -> list[str]:`",
+  "function_name": "full_justify",
+  "params": [
+    {
+      "name": "words",
+      "type": "list[str]"
+    },
+    {
+      "name": "max_width",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[str]",
+  "starter_code": "def full_justify(words: list[str], max_width: int) -> list[str]:\n    pass",
+  "test_cases": []
+}

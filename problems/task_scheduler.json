@@ -1,0 +1,63 @@
+{
+  "id": "task_scheduler",
+  "title": "Task Scheduler",
+  "difficulty": "medium",
+  "description": "Solve the **Task Scheduler** problem on LeetCode.\n\nFunction signature: `def least_interval(tasks: list[str], n: int) -> int:`",
+  "function_name": "least_interval",
+  "params": [
+    {
+      "name": "tasks",
+      "type": "list[str]"
+    },
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def least_interval(tasks: list[str], n: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "tasks": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        "n": 2
+      },
+      "expected": 8
+    },
+    {
+      "input": {
+        "tasks": [
+          "A",
+          "C",
+          "A",
+          "B",
+          "D",
+          "B"
+        ],
+        "n": 1
+      },
+      "expected": 6
+    },
+    {
+      "input": {
+        "tasks": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        "n": 3
+      },
+      "expected": 10
+    }
+  ]
+}

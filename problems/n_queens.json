@@ -1,0 +1,16 @@
+{
+  "id": "n_queens",
+  "title": "N-Queens",
+  "difficulty": "hard",
+  "description": "Solve the **N-Queens** problem on LeetCode.\n\nFunction signature: `def solve_n_queens(n: int) -> list[list[str]]:`",
+  "function_name": "solve_n_queens",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[list[str]]",
+  "starter_code": "def solve_n_queens(n: int) -> list[list[str]]:\n    pass",
+  "test_cases": []
+}

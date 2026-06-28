@@ -1,17 +1,53 @@
 {
   "id": "reverse_linked_list",
   "title": "Reverse Linked List",
-  "difficulty": "medium",
-  "description": "Given the `head` of a singly linked list, reverse the list and return the reversed list.\n\nThe linked list is defined as:\n```python\nclass ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n```\n\nInput is provided as a Python list for convenience. Convert it to a linked list in your solution.\n\nYour function should return the **head** of the reversed linked list.",
+  "difficulty": "easy",
+  "description": "Solve the **Reverse Linked List** problem on LeetCode.\n\nFunction signature: `def reverse_list(head: list[int]) -> list[int]:`",
   "function_name": "reverse_list",
   "params": [
-    {"name": "head", "type": "list[int]"}
+    {
+      "name": "head",
+      "type": "list[int]"
+    }
   ],
   "return_type": "list[int]",
-  "starter_code": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef reverse_list(head: list[int]) -> list[int]:\n    pass",
+  "starter_code": "def reverse_list(head: list[int]) -> list[int]:\n    pass",
   "test_cases": [
-    {"input": {"head": [1, 2, 3, 4, 5]}, "expected": [5, 4, 3, 2, 1]},
-    {"input": {"head": [1, 2]}, "expected": [2, 1]},
-    {"input": {"head": []}, "expected": []}
+    {
+      "input": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "input": {
+        "head": [
+          1,
+          2
+        ]
+      },
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "input": {
+        "head": []
+      },
+      "expected": []
+    }
   ]
 }

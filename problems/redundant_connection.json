@@ -1,0 +1,16 @@
+{
+  "id": "redundant_connection",
+  "title": "Redundant Connection",
+  "difficulty": "medium",
+  "description": "Solve the **Redundant Connection** problem on LeetCode.\n\nFunction signature: `def find_redundant_connection(edges: list[list[int]]) -> list[int]:`",
+  "function_name": "find_redundant_connection",
+  "params": [
+    {
+      "name": "edges",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def find_redundant_connection(edges: list[list[int]]) -> list[int]:\n    pass",
+  "test_cases": []
+}

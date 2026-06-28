@@ -1,0 +1,67 @@
+{
+  "id": "group_anagrams",
+  "title": "Group Anagrams",
+  "difficulty": "medium",
+  "description": "Solve the **Group Anagrams** problem on LeetCode.\n\nFunction signature: `def group_anagrams(strs: list[str]) -> list[list[str]]:`",
+  "function_name": "group_anagrams",
+  "params": [
+    {
+      "name": "strs",
+      "type": "list[str]"
+    }
+  ],
+  "return_type": "list[list[str]]",
+  "starter_code": "def group_anagrams(strs: list[str]) -> list[list[str]]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "strs": [
+          "eat",
+          "tea",
+          "tan",
+          "ate",
+          "nat",
+          "bat"
+        ]
+      },
+      "expected": [
+        [
+          "bat"
+        ],
+        [
+          "nat",
+          "tan"
+        ],
+        [
+          "ate",
+          "eat",
+          "tea"
+        ]
+      ]
+    },
+    {
+      "input": {
+        "strs": [
+          ""
+        ]
+      },
+      "expected": [
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "input": {
+        "strs": [
+          "a"
+        ]
+      },
+      "expected": [
+        [
+          "a"
+        ]
+      ]
+    }
+  ]
+}

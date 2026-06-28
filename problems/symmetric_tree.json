@@ -1,0 +1,45 @@
+{
+  "id": "symmetric_tree",
+  "title": "Symmetric Tree",
+  "difficulty": "easy",
+  "description": "Solve the **Symmetric Tree** problem on LeetCode.\n\nFunction signature: `def is_symmetric(root: list[int]) -> bool:`",
+  "function_name": "is_symmetric",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_symmetric(root: list[int]) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "root": [
+          1,
+          2,
+          2,
+          3,
+          4,
+          4,
+          3
+        ]
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "root": [
+          1,
+          2,
+          2,
+          null,
+          3,
+          null,
+          3
+        ]
+      },
+      "expected": false
+    }
+  ]
+}

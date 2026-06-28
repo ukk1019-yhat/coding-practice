@@ -1,0 +1,16 @@
+{
+  "id": "burst_balloons",
+  "title": "Burst Balloons",
+  "difficulty": "hard",
+  "description": "Solve the **Burst Balloons** problem on LeetCode.\n\nFunction signature: `def max_coins(nums: list[int]) -> int:`",
+  "function_name": "max_coins",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def max_coins(nums: list[int]) -> int:\n    pass",
+  "test_cases": []
+}

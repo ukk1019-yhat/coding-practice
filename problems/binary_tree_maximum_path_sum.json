@@ -1,0 +1,16 @@
+{
+  "id": "binary_tree_maximum_path_sum",
+  "title": "Binary Tree Maximum Path Sum",
+  "difficulty": "hard",
+  "description": "Solve the **Binary Tree Maximum Path Sum** problem on LeetCode.\n\nFunction signature: `def max_path_sum(root: list[int]) -> int:`",
+  "function_name": "max_path_sum",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def max_path_sum(root: list[int]) -> int:\n    pass",
+  "test_cases": []
+}

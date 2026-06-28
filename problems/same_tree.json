@@ -1,0 +1,20 @@
+{
+  "id": "same_tree",
+  "title": "Same Tree",
+  "difficulty": "easy",
+  "description": "Solve the **Same Tree** problem on LeetCode.\n\nFunction signature: `def is_same_tree(p: list[int], q: list[int]) -> bool:`",
+  "function_name": "is_same_tree",
+  "params": [
+    {
+      "name": "p",
+      "type": "list[int]"
+    },
+    {
+      "name": "q",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_same_tree(p: list[int], q: list[int]) -> bool:\n    pass",
+  "test_cases": []
+}

@@ -1,0 +1,47 @@
+{
+  "id": "single_number",
+  "title": "Single Number",
+  "difficulty": "easy",
+  "description": "Solve the **Single Number** problem on LeetCode.\n\nFunction signature: `def single_number(nums: list[int]) -> int:`",
+  "function_name": "single_number",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def single_number(nums: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          2,
+          2,
+          1
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "input": {
+        "nums": [
+          4,
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "input": {
+        "nums": [
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
+}

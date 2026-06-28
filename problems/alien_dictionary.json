@@ -1,0 +1,16 @@
+{
+  "id": "alien_dictionary",
+  "title": "Alien Dictionary",
+  "difficulty": "hard",
+  "description": "Solve the **Alien Dictionary** problem on LeetCode.\n\nFunction signature: `def alien_order(words: list[str]) -> str:`",
+  "function_name": "alien_order",
+  "params": [
+    {
+      "name": "words",
+      "type": "list[str]"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def alien_order(words: list[str]) -> str:\n    pass",
+  "test_cases": []
+}

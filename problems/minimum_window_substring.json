@@ -1,0 +1,42 @@
+{
+  "id": "minimum_window_substring",
+  "title": "Minimum Window Substring",
+  "difficulty": "hard",
+  "description": "Solve the **Minimum Window Substring** problem on LeetCode.\n\nFunction signature: `def min_window(s: str, t: str) -> str:`",
+  "function_name": "min_window",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    },
+    {
+      "name": "t",
+      "type": "str"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def min_window(s: str, t: str) -> str:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "ADOBECODEBANC",
+        "t": "ABC"
+      },
+      "expected": "BANC"
+    },
+    {
+      "input": {
+        "s": "a",
+        "t": "a"
+      },
+      "expected": "a"
+    },
+    {
+      "input": {
+        "s": "a",
+        "t": "aa"
+      },
+      "expected": ""
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "non_overlapping_intervals",
+  "title": "Non-overlapping Intervals",
+  "difficulty": "medium",
+  "description": "Solve the **Non-overlapping Intervals** problem on LeetCode.\n\nFunction signature: `def erase_overlap_intervals(intervals: list[list[int]]) -> int:`",
+  "function_name": "erase_overlap_intervals",
+  "params": [
+    {
+      "name": "intervals",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def erase_overlap_intervals(intervals: list[list[int]]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "intervals": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "expected": 1
+    },
+    {
+      "input": {
+        "intervals": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": 2
+    }
+  ]
+}

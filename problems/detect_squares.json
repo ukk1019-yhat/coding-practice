@@ -1,0 +1,11 @@
+{
+  "id": "detect_squares",
+  "title": "Detect Squares",
+  "difficulty": "medium",
+  "description": "Solve the **Detect Squares** problem on LeetCode.\n\nFunction signature: `class DetectSquares:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class DetectSquares:\n    def __init__(self):\n        pass\n    def add(self, point: list[int]) -> None:\n        pass\n    def count(self, point: list[int]) -> int:\n        pass",
+  "test_cases": []
+}

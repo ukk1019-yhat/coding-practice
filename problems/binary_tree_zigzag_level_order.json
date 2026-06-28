@@ -1,0 +1,16 @@
+{
+  "id": "binary_tree_zigzag_level_order",
+  "title": "Binary Tree Zigzag Level Order Traversal",
+  "difficulty": "medium",
+  "description": "Solve the **Binary Tree Zigzag Level Order Traversal** problem on LeetCode.\n\nFunction signature: `def zigzag_level_order(root: list[int]) -> list[list[int]]:`",
+  "function_name": "zigzag_level_order",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def zigzag_level_order(root: list[int]) -> list[list[int]]:\n    pass",
+  "test_cases": []
+}

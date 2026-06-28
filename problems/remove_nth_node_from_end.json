@@ -1,0 +1,60 @@
+{
+  "id": "remove_nth_node_from_end",
+  "title": "Remove Nth Node From End of List",
+  "difficulty": "medium",
+  "description": "Solve the **Remove Nth Node From End of List** problem on LeetCode.\n\nFunction signature: `def remove_nth_from_end(head: list[int], n: int) -> list[int]:`",
+  "function_name": "remove_nth_from_end",
+  "params": [
+    {
+      "name": "head",
+      "type": "list[int]"
+    },
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def remove_nth_from_end(head: list[int], n: int) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n": 2
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "input": {
+        "head": [
+          1
+        ],
+        "n": 1
+      },
+      "expected": []
+    },
+    {
+      "input": {
+        "head": [
+          1,
+          2
+        ],
+        "n": 1
+      },
+      "expected": [
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "number_of_1_bits",
+  "title": "Number of 1 Bits",
+  "difficulty": "easy",
+  "description": "Solve the **Number of 1 Bits** problem on LeetCode.\n\nFunction signature: `def hamming_weight(n: int) -> int:`",
+  "function_name": "hamming_weight",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def hamming_weight(n: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 11
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "n": 128
+      },
+      "expected": 1
+    },
+    {
+      "input": {
+        "n": 4294967293
+      },
+      "expected": 31
+    }
+  ]
+}

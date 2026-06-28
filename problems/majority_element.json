@@ -1,0 +1,41 @@
+{
+  "id": "majority_element",
+  "title": "Majority Element",
+  "difficulty": "easy",
+  "description": "Solve the **Majority Element** problem on LeetCode.\n\nFunction signature: `def majority_element(nums: list[int]) -> int:`",
+  "function_name": "majority_element",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def majority_element(nums: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          3,
+          2,
+          3
+        ]
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "nums": [
+          2,
+          2,
+          1,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": 2
+    }
+  ]
+}

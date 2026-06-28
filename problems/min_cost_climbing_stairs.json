@@ -1,0 +1,44 @@
+{
+  "id": "min_cost_climbing_stairs",
+  "title": "Min Cost Climbing Stairs",
+  "difficulty": "easy",
+  "description": "Solve the **Min Cost Climbing Stairs** problem on LeetCode.\n\nFunction signature: `def min_cost_climbing_stairs(cost: list[int]) -> int:`",
+  "function_name": "min_cost_climbing_stairs",
+  "params": [
+    {
+      "name": "cost",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def min_cost_climbing_stairs(cost: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "cost": [
+          10,
+          15,
+          20
+        ]
+      },
+      "expected": 15
+    },
+    {
+      "input": {
+        "cost": [
+          1,
+          100,
+          1,
+          1,
+          1,
+          100,
+          1,
+          1,
+          100,
+          1
+        ]
+      },
+      "expected": 6
+    }
+  ]
+}

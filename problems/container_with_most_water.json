@@ -1,0 +1,42 @@
+{
+  "id": "container_with_most_water",
+  "title": "Container With Most Water",
+  "difficulty": "medium",
+  "description": "Solve the **Container With Most Water** problem on LeetCode.\n\nFunction signature: `def max_area(height: list[int]) -> int:`",
+  "function_name": "max_area",
+  "params": [
+    {
+      "name": "height",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def max_area(height: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "height": [
+          1,
+          8,
+          6,
+          2,
+          5,
+          4,
+          8,
+          3,
+          7
+        ]
+      },
+      "expected": 49
+    },
+    {
+      "input": {
+        "height": [
+          1,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
+}

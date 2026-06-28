@@ -1,0 +1,16 @@
+{
+  "id": "serialize_deserialize_binary_tree",
+  "title": "Serialize and Deserialize Binary Tree",
+  "difficulty": "hard",
+  "description": "Solve the **Serialize and Deserialize Binary Tree** problem on LeetCode.\n\nFunction signature: `def serialize(root: list[int]) -> str:`",
+  "function_name": "serialize",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def serialize(root: list[int]) -> str:\n    pass\n\ndef deserialize(data: str) -> list[int]:\n    pass",
+  "test_cases": []
+}

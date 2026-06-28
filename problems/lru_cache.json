@@ -1,0 +1,11 @@
+{
+  "id": "lru_cache",
+  "title": "LRU Cache",
+  "difficulty": "medium",
+  "description": "Solve the **LRU Cache** problem on LeetCode.\n\nFunction signature: `class LRUCache:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class LRUCache:\n    def __init__(self, capacity: int):\n        pass\n    def get(self, key: int) -> int:\n        pass\n    def put(self, key: int, value: int) -> None:\n        pass",
+  "test_cases": []
+}

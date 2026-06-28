@@ -125,3 +125,27 @@ async def submit(body: dict):
             result = {"error": "Your code timed out (limit: 10 seconds)."}
 
     return JSONResponse(result)
+
+@app.post("/api/run")
+async def run_code(body: dict):
+    code = body.get("code", "")
+    if not code:
+        return JSONResponse({"error": "No code provided"}, status_code=400)
+
+    with concurrent.futures.ThreadPoolExecutor() as pool:
+        def _exec():
+            output_capture = StringIO()
+            namespace = {}
+            with redirect_stdout(output_capture), redirect_stderr(output_capture):
+                try:
+                    exec(code, namespace)
+                except Exception:
+                    return {"stdout": output_capture.getvalue(), "error": traceback.format_exc()}
+            return {"stdout": output_capture.getvalue(), "error": None}
+        future = pool.submit(_exec)
+        try:
+            result = future.result(timeout=10)
+        except concurrent.futures.TimeoutError:
+            result = {"stdout": "", "error": "Your code timed out (limit: 10 seconds)."}
+
+    return JSONResponse(result)

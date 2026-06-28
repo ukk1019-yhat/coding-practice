@@ -1,0 +1,35 @@
+{
+  "id": "valid_anagram",
+  "title": "Valid Anagram",
+  "difficulty": "easy",
+  "description": "Solve the **Valid Anagram** problem on LeetCode.\n\nFunction signature: `def is_anagram(s: str, t: str) -> bool:`",
+  "function_name": "is_anagram",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    },
+    {
+      "name": "t",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_anagram(s: str, t: str) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "anagram",
+        "t": "nagaram"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "rat",
+        "t": "car"
+      },
+      "expected": false
+    }
+  ]
+}

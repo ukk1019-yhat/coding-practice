@@ -1,0 +1,40 @@
+{
+  "id": "counting_bits",
+  "title": "Counting Bits",
+  "difficulty": "easy",
+  "description": "Solve the **Counting Bits** problem on LeetCode.\n\nFunction signature: `def count_bits(n: int) -> list[int]:`",
+  "function_name": "count_bits",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def count_bits(n: int) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 2
+      },
+      "expected": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "input": {
+        "n": 5
+      },
+      "expected": [
+        0,
+        1,
+        1,
+        2,
+        1,
+        2
+      ]
+    }
+  ]
+}

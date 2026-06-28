@@ -1,0 +1,16 @@
+{
+  "id": "rotate_image",
+  "title": "Rotate Image",
+  "difficulty": "medium",
+  "description": "Solve the **Rotate Image** problem on LeetCode.\n\nFunction signature: `def rotate(matrix: list[list[int]]) -> None:`",
+  "function_name": "rotate",
+  "params": [
+    {
+      "name": "matrix",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def rotate(matrix: list[list[int]]) -> None:\n    \"\"\"Modify matrix in-place.\"\"\"\n    pass",
+  "test_cases": []
+}

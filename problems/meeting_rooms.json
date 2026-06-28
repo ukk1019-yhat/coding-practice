@@ -1,0 +1,16 @@
+{
+  "id": "meeting_rooms",
+  "title": "Meeting Rooms",
+  "difficulty": "easy",
+  "description": "Solve the **Meeting Rooms** problem on LeetCode.\n\nFunction signature: `def can_attend_meetings(intervals: list[list[int]]) -> bool:`",
+  "function_name": "can_attend_meetings",
+  "params": [
+    {
+      "name": "intervals",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def can_attend_meetings(intervals: list[list[int]]) -> bool:\n    pass",
+  "test_cases": []
+}

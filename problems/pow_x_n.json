@@ -1,0 +1,42 @@
+{
+  "id": "pow_x_n",
+  "title": "Pow(x, n)",
+  "difficulty": "medium",
+  "description": "Solve the **Pow(x, n)** problem on LeetCode.\n\nFunction signature: `def my_pow(x: float, n: int) -> float:`",
+  "function_name": "my_pow",
+  "params": [
+    {
+      "name": "x",
+      "type": "float"
+    },
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "float",
+  "starter_code": "def my_pow(x: float, n: int) -> float:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "x": 2.0,
+        "n": 10
+      },
+      "expected": 1024.0
+    },
+    {
+      "input": {
+        "x": 2.1,
+        "n": 3
+      },
+      "expected": 9.261
+    },
+    {
+      "input": {
+        "x": 2.0,
+        "n": -2
+      },
+      "expected": 0.25
+    }
+  ]
+}

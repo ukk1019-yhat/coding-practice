@@ -1,0 +1,16 @@
+{
+  "id": "balanced_binary_tree",
+  "title": "Balanced Binary Tree",
+  "difficulty": "easy",
+  "description": "Solve the **Balanced Binary Tree** problem on LeetCode.\n\nFunction signature: `def is_balanced(root: list[int]) -> bool:`",
+  "function_name": "is_balanced",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_balanced(root: list[int]) -> bool:\n    pass",
+  "test_cases": []
+}

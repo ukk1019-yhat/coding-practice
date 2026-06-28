@@ -1,0 +1,99 @@
+{
+  "id": "word_search",
+  "title": "Word Search",
+  "difficulty": "medium",
+  "description": "Solve the **Word Search** problem on LeetCode.\n\nFunction signature: `def exist(board: list[list[str]], word: str) -> bool:`",
+  "function_name": "exist",
+  "params": [
+    {
+      "name": "board",
+      "type": "list[list[str]]"
+    },
+    {
+      "name": "word",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def exist(board: list[list[str]], word: str) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "board": [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "word": "ABCCED"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "board": [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "word": "SEE"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "board": [
+          [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          [
+            "S",
+            "F",
+            "C",
+            "S"
+          ],
+          [
+            "A",
+            "D",
+            "E",
+            "E"
+          ]
+        ],
+        "word": "ABCB"
+      },
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "coin_change_ii",
+  "title": "Coin Change II",
+  "difficulty": "medium",
+  "description": "Solve the **Coin Change II** problem on LeetCode.\n\nFunction signature: `def change(amount: int, coins: list[int]) -> int:`",
+  "function_name": "change",
+  "params": [
+    {
+      "name": "amount",
+      "type": "int"
+    },
+    {
+      "name": "coins",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def change(amount: int, coins: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "amount": 5,
+        "coins": [
+          1,
+          2,
+          5
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "input": {
+        "amount": 3,
+        "coins": [
+          2
+        ]
+      },
+      "expected": 0
+    },
+    {
+      "input": {
+        "amount": 10,
+        "coins": [
+          10
+        ]
+      },
+      "expected": 1
+    }
+  ]
+}

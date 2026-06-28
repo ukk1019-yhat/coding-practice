@@ -1,0 +1,35 @@
+{
+  "id": "valid_palindrome",
+  "title": "Valid Palindrome",
+  "difficulty": "easy",
+  "description": "Solve the **Valid Palindrome** problem on LeetCode.\n\nFunction signature: `def is_palindrome(s: str) -> bool:`",
+  "function_name": "is_palindrome",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_palindrome(s: str) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "A man, a plan, a canal: Panama"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "race a car"
+      },
+      "expected": false
+    },
+    {
+      "input": {
+        "s": " "
+      },
+      "expected": true
+    }
+  ]
+}

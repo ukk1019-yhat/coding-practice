@@ -1,0 +1,28 @@
+{
+  "id": "merge_sorted_array",
+  "title": "Merge Sorted Array",
+  "difficulty": "easy",
+  "description": "Solve the **Merge Sorted Array** problem on LeetCode.\n\nFunction signature: `def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:`",
+  "function_name": "merge",
+  "params": [
+    {
+      "name": "nums1",
+      "type": "list[int]"
+    },
+    {
+      "name": "m",
+      "type": "int"
+    },
+    {
+      "name": "nums2",
+      "type": "list[int]"
+    },
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:\n    \"\"\"Modify nums1 in-place.\"\"\"\n    pass",
+  "test_cases": []
+}

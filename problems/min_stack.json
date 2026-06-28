@@ -1,0 +1,11 @@
+{
+  "id": "min_stack",
+  "title": "Min Stack",
+  "difficulty": "medium",
+  "description": "Solve the **Min Stack** problem on LeetCode.\n\nFunction signature: `class MinStack:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class MinStack:\n    def __init__(self):\n        pass\n    def push(self, val: int) -> None:\n        pass\n    def pop(self) -> None:\n        pass\n    def top(self) -> int:\n        pass\n    def get_min(self) -> int:\n        pass",
+  "test_cases": []
+}

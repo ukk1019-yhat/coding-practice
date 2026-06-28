@@ -1,0 +1,49 @@
+{
+  "id": "letter_combinations_of_phone_number",
+  "title": "Letter Combinations of a Phone Number",
+  "difficulty": "medium",
+  "description": "Solve the **Letter Combinations of a Phone Number** problem on LeetCode.\n\nFunction signature: `def letter_combinations(digits: str) -> list[str]:`",
+  "function_name": "letter_combinations",
+  "params": [
+    {
+      "name": "digits",
+      "type": "str"
+    }
+  ],
+  "return_type": "list[str]",
+  "starter_code": "def letter_combinations(digits: str) -> list[str]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "digits": "23"
+      },
+      "expected": [
+        "ad",
+        "ae",
+        "af",
+        "bd",
+        "be",
+        "bf",
+        "cd",
+        "ce",
+        "cf"
+      ]
+    },
+    {
+      "input": {
+        "digits": ""
+      },
+      "expected": []
+    },
+    {
+      "input": {
+        "digits": "2"
+      },
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ]
+}

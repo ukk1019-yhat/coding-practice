@@ -1,0 +1,35 @@
+{
+  "id": "longest_valid_parentheses",
+  "title": "Longest Valid Parentheses",
+  "difficulty": "hard",
+  "description": "Solve the **Longest Valid Parentheses** problem on LeetCode.\n\nFunction signature: `def longest_valid_parentheses(s: str) -> int:`",
+  "function_name": "longest_valid_parentheses",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def longest_valid_parentheses(s: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "(()"
+      },
+      "expected": 2
+    },
+    {
+      "input": {
+        "s": ")()())"
+      },
+      "expected": 4
+    },
+    {
+      "input": {
+        "s": ""
+      },
+      "expected": 0
+    }
+  ]
+}

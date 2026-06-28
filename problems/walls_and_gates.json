@@ -1,0 +1,16 @@
+{
+  "id": "walls_and_gates",
+  "title": "Walls and Gates",
+  "difficulty": "medium",
+  "description": "Solve the **Walls and Gates** problem on LeetCode.\n\nFunction signature: `def walls_and_gates(rooms: list[list[int]]) -> None:`",
+  "function_name": "walls_and_gates",
+  "params": [
+    {
+      "name": "rooms",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def walls_and_gates(rooms: list[list[int]]) -> None:\n    \"\"\"Modify rooms in-place. INF = 2147483647, GATE = 0, WALL = -1\"\"\"\n    pass",
+  "test_cases": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "longest_common_prefix",
+  "title": "Longest Common Prefix",
+  "difficulty": "easy",
+  "description": "Solve the **Longest Common Prefix** problem on LeetCode.\n\nFunction signature: `def longest_common_prefix(strs: list[str]) -> str:`",
+  "function_name": "longest_common_prefix",
+  "params": [
+    {
+      "name": "strs",
+      "type": "list[str]"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def longest_common_prefix(strs: list[str]) -> str:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "strs": [
+          "flower",
+          "flow",
+          "flight"
+        ]
+      },
+      "expected": "fl"
+    },
+    {
+      "input": {
+        "strs": [
+          "dog",
+          "racecar",
+          "car"
+        ]
+      },
+      "expected": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "palindrome_partitioning",
+  "title": "Palindrome Partitioning",
+  "difficulty": "medium",
+  "description": "Solve the **Palindrome Partitioning** problem on LeetCode.\n\nFunction signature: `def partition(s: str) -> list[list[str]]:`",
+  "function_name": "partition",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "list[list[str]]",
+  "starter_code": "def partition(s: str) -> list[list[str]]:\n    pass",
+  "test_cases": []
+}

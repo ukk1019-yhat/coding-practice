@@ -1,0 +1,35 @@
+{
+  "id": "sum_of_two_integers",
+  "title": "Sum of Two Integers",
+  "difficulty": "medium",
+  "description": "Solve the **Sum of Two Integers** problem on LeetCode.\n\nFunction signature: `def get_sum(a: int, b: int) -> int:`",
+  "function_name": "get_sum",
+  "params": [
+    {
+      "name": "a",
+      "type": "int"
+    },
+    {
+      "name": "b",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def get_sum(a: int, b: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "a": 1,
+        "b": 2
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "a": 2,
+        "b": 3
+      },
+      "expected": 5
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "find_the_duplicate_number",
+  "title": "Find the Duplicate Number",
+  "difficulty": "medium",
+  "description": "Solve the **Find the Duplicate Number** problem on LeetCode.\n\nFunction signature: `def find_duplicate(nums: list[int]) -> int:`",
+  "function_name": "find_duplicate",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def find_duplicate(nums: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          1,
+          3,
+          4,
+          2,
+          2
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "input": {
+        "nums": [
+          3,
+          1,
+          3,
+          4,
+          2
+        ]
+      },
+      "expected": 3
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "reconstruct_itinerary",
+  "title": "Reconstruct Itinerary",
+  "difficulty": "hard",
+  "description": "Solve the **Reconstruct Itinerary** problem on LeetCode.\n\nFunction signature: `def find_itinerary(tickets: list[list[str]]) -> list[str]:`",
+  "function_name": "find_itinerary",
+  "params": [
+    {
+      "name": "tickets",
+      "type": "list[list[str]]"
+    }
+  ],
+  "return_type": "list[str]",
+  "starter_code": "def find_itinerary(tickets: list[list[str]]) -> list[str]:\n    pass",
+  "test_cases": []
+}

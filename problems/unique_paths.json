@@ -1,0 +1,35 @@
+{
+  "id": "unique_paths",
+  "title": "Unique Paths",
+  "difficulty": "medium",
+  "description": "Solve the **Unique Paths** problem on LeetCode.\n\nFunction signature: `def unique_paths(m: int, n: int) -> int:`",
+  "function_name": "unique_paths",
+  "params": [
+    {
+      "name": "m",
+      "type": "int"
+    },
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def unique_paths(m: int, n: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "m": 3,
+        "n": 7
+      },
+      "expected": 28
+    },
+    {
+      "input": {
+        "m": 3,
+        "n": 2
+      },
+      "expected": 3
+    }
+  ]
+}

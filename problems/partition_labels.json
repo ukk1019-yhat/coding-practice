@@ -1,0 +1,35 @@
+{
+  "id": "partition_labels",
+  "title": "Partition Labels",
+  "difficulty": "medium",
+  "description": "Solve the **Partition Labels** problem on LeetCode.\n\nFunction signature: `def partition_labels(s: str) -> list[int]:`",
+  "function_name": "partition_labels",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def partition_labels(s: str) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "ababcbacadefegdehijhklij"
+      },
+      "expected": [
+        9,
+        7,
+        8
+      ]
+    },
+    {
+      "input": {
+        "s": "eccbbbbdec"
+      },
+      "expected": [
+        10
+      ]
+    }
+  ]
+}

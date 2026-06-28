@@ -1,0 +1,11 @@
+{
+  "id": "design_twitter",
+  "title": "Design Twitter",
+  "difficulty": "medium",
+  "description": "Solve the **Design Twitter** problem on LeetCode.\n\nFunction signature: `class Twitter:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class Twitter:\n    def __init__(self):\n        pass\n    def post_tweet(self, userId: int, tweetId: int) -> None:\n        pass\n    def get_news_feed(self, userId: int) -> list[int]:\n        pass\n    def follow(self, followerId: int, followeeId: int) -> None:\n        pass\n    def unfollow(self, followerId: int, followeeId: int) -> None:\n        pass",
+  "test_cases": []
+}

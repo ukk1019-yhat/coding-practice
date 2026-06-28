@@ -1,0 +1,16 @@
+{
+  "id": "set_matrix_zeroes",
+  "title": "Set Matrix Zeroes",
+  "difficulty": "medium",
+  "description": "Solve the **Set Matrix Zeroes** problem on LeetCode.\n\nFunction signature: `def set_zeroes(matrix: list[list[int]]) -> None:`",
+  "function_name": "set_zeroes",
+  "params": [
+    {
+      "name": "matrix",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def set_zeroes(matrix: list[list[int]]) -> None:\n    \"\"\"Modify matrix in-place.\"\"\"\n    pass",
+  "test_cases": []
+}

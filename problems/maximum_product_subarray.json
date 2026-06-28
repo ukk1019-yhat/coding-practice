@@ -1,0 +1,38 @@
+{
+  "id": "maximum_product_subarray",
+  "title": "Maximum Product Subarray",
+  "difficulty": "medium",
+  "description": "Solve the **Maximum Product Subarray** problem on LeetCode.\n\nFunction signature: `def max_product(nums: list[int]) -> int:`",
+  "function_name": "max_product",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def max_product(nums: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          2,
+          3,
+          -2,
+          4
+        ]
+      },
+      "expected": 6
+    },
+    {
+      "input": {
+        "nums": [
+          -2,
+          0,
+          -1
+        ]
+      },
+      "expected": 0
+    }
+  ]
+}

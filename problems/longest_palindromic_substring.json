@@ -1,0 +1,29 @@
+{
+  "id": "longest_palindromic_substring",
+  "title": "Longest Palindromic Substring",
+  "difficulty": "medium",
+  "description": "Solve the **Longest Palindromic Substring** problem on LeetCode.\n\nFunction signature: `def longest_palindrome(s: str) -> str:`",
+  "function_name": "longest_palindrome",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def longest_palindrome(s: str) -> str:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "babad"
+      },
+      "expected": "bab"
+    },
+    {
+      "input": {
+        "s": "cbbd"
+      },
+      "expected": "bb"
+    }
+  ]
+}

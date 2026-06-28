@@ -1,0 +1,20 @@
+{
+  "id": "merge_triplets_to_form_target",
+  "title": "Merge Triplets to Form Target Triplet",
+  "difficulty": "medium",
+  "description": "Solve the **Merge Triplets to Form Target Triplet** problem on LeetCode.\n\nFunction signature: `def merge_triplets(triplets: list[list[int]], target: list[int]) -> bool:`",
+  "function_name": "merge_triplets",
+  "params": [
+    {
+      "name": "triplets",
+      "type": "list[list[int]]"
+    },
+    {
+      "name": "target",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def merge_triplets(triplets: list[list[int]], target: list[int]) -> bool:\n    pass",
+  "test_cases": []
+}

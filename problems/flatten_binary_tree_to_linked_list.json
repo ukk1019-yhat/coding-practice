@@ -1,0 +1,16 @@
+{
+  "id": "flatten_binary_tree_to_linked_list",
+  "title": "Flatten Binary Tree to Linked List",
+  "difficulty": "medium",
+  "description": "Solve the **Flatten Binary Tree to Linked List** problem on LeetCode.\n\nFunction signature: `def flatten(root: list[int]) -> list[int]:`",
+  "function_name": "flatten",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def flatten(root: list[int]) -> list[int]:\n    pass",
+  "test_cases": []
+}

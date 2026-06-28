@@ -1,0 +1,20 @@
+{
+  "id": "contains_duplicate_ii",
+  "title": "Contains Duplicate II",
+  "difficulty": "easy",
+  "description": "Solve the **Contains Duplicate II** problem on LeetCode.\n\nFunction signature: `def contains_nearby_duplicate(nums: list[int], k: int) -> bool:`",
+  "function_name": "contains_nearby_duplicate",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    },
+    {
+      "name": "k",
+      "type": "int"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def contains_nearby_duplicate(nums: list[int], k: int) -> bool:\n    pass",
+  "test_cases": []
+}

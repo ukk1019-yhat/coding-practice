@@ -1,0 +1,16 @@
+{
+  "id": "number_of_provinces",
+  "title": "Number of Provinces",
+  "difficulty": "medium",
+  "description": "Solve the **Number of Provinces** problem on LeetCode.\n\nFunction signature: `def find_circle_num(is_connected: list[list[int]]) -> int:`",
+  "function_name": "find_circle_num",
+  "params": [
+    {
+      "name": "is_connected",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def find_circle_num(is_connected: list[list[int]]) -> int:\n    pass",
+  "test_cases": []
+}

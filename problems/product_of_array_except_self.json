@@ -1,0 +1,51 @@
+{
+  "id": "product_of_array_except_self",
+  "title": "Product of Array Except Self",
+  "difficulty": "medium",
+  "description": "Solve the **Product of Array Except Self** problem on LeetCode.\n\nFunction signature: `def product_except_self(nums: list[int]) -> list[int]:`",
+  "function_name": "product_except_self",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def product_except_self(nums: list[int]) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "expected": [
+        24,
+        12,
+        8,
+        6
+      ]
+    },
+    {
+      "input": {
+        "nums": [
+          -1,
+          1,
+          0,
+          -3,
+          3
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        9,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "longest_repeating_character_replacement",
+  "title": "Longest Repeating Character Replacement",
+  "difficulty": "medium",
+  "description": "Solve the **Longest Repeating Character Replacement** problem on LeetCode.\n\nFunction signature: `def character_replacement(s: str, k: int) -> int:`",
+  "function_name": "character_replacement",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    },
+    {
+      "name": "k",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def character_replacement(s: str, k: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "ABAB",
+        "k": 2
+      },
+      "expected": 4
+    },
+    {
+      "input": {
+        "s": "AABABBA",
+        "k": 1
+      },
+      "expected": 4
+    }
+  ]
+}

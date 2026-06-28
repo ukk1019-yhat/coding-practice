@@ -1,0 +1,11 @@
+{
+  "id": "max_stack",
+  "title": "Max Stack",
+  "difficulty": "hard",
+  "description": "Solve the **Max Stack** problem on LeetCode.\n\nFunction signature: `class MaxStack:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class MaxStack:\n    def __init__(self):\n        pass\n    def push(self, val: int) -> None:\n        pass\n    def pop(self) -> int:\n        pass\n    def top(self) -> int:\n        pass\n    def peek_max(self) -> int:\n        pass\n    def pop_max(self) -> int:\n        pass",
+  "test_cases": []
+}

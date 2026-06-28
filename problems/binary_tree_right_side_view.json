@@ -1,0 +1,16 @@
+{
+  "id": "binary_tree_right_side_view",
+  "title": "Binary Tree Right Side View",
+  "difficulty": "medium",
+  "description": "Solve the **Binary Tree Right Side View** problem on LeetCode.\n\nFunction signature: `def right_side_view(root: list[int]) -> list[int]:`",
+  "function_name": "right_side_view",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def right_side_view(root: list[int]) -> list[int]:\n    pass",
+  "test_cases": []
+}

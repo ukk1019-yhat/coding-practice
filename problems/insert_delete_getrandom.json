@@ -1,0 +1,11 @@
+{
+  "id": "insert_delete_getrandom",
+  "title": "Insert Delete GetRandom O(1)",
+  "difficulty": "medium",
+  "description": "Solve the **Insert Delete GetRandom O(1)** problem on LeetCode.\n\nFunction signature: `class RandomizedSet:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class RandomizedSet:\n    def __init__(self):\n        pass\n    def insert(self, val: int) -> bool:\n        pass\n    def remove(self, val: int) -> bool:\n        pass\n    def get_random(self) -> int:\n        pass",
+  "test_cases": []
+}

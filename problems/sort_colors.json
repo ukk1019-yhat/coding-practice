@@ -1,0 +1,51 @@
+{
+  "id": "sort_colors",
+  "title": "Sort Colors",
+  "difficulty": "medium",
+  "description": "Solve the **Sort Colors** problem on LeetCode.\n\nFunction signature: `def sort_colors(nums: list[int]) -> None:`",
+  "function_name": "sort_colors",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def sort_colors(nums: list[int]) -> None:\n    \"\"\"Modify nums in-place.\"\"\"\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          2,
+          0,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "input": {
+        "nums": [
+          2,
+          0,
+          1
+        ]
+      },
+      "expected": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

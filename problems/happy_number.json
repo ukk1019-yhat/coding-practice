@@ -1,0 +1,29 @@
+{
+  "id": "happy_number",
+  "title": "Happy Number",
+  "difficulty": "easy",
+  "description": "Solve the **Happy Number** problem on LeetCode.\n\nFunction signature: `def is_happy(n: int) -> bool:`",
+  "function_name": "is_happy",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_happy(n: int) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 19
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "n": 2
+      },
+      "expected": false
+    }
+  ]
+}

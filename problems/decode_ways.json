@@ -1,0 +1,35 @@
+{
+  "id": "decode_ways",
+  "title": "Decode Ways",
+  "difficulty": "medium",
+  "description": "Solve the **Decode Ways** problem on LeetCode.\n\nFunction signature: `def num_decodings(s: str) -> int:`",
+  "function_name": "num_decodings",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def num_decodings(s: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "12"
+      },
+      "expected": 2
+    },
+    {
+      "input": {
+        "s": "226"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "s": "06"
+      },
+      "expected": 0
+    }
+  ]
+}

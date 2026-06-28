@@ -1,0 +1,20 @@
+{
+  "id": "number_of_connected_components",
+  "title": "Number of Connected Components in an Undirected Graph",
+  "difficulty": "medium",
+  "description": "Solve the **Number of Connected Components in an Undirected Graph** problem on LeetCode.\n\nFunction signature: `def count_components(n: int, edges: list[list[int]]) -> int:`",
+  "function_name": "count_components",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    },
+    {
+      "name": "edges",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def count_components(n: int, edges: list[list[int]]) -> int:\n    pass",
+  "test_cases": []
+}

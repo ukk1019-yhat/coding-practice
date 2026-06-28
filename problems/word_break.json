@@ -1,0 +1,54 @@
+{
+  "id": "word_break",
+  "title": "Word Break",
+  "difficulty": "medium",
+  "description": "Solve the **Word Break** problem on LeetCode.\n\nFunction signature: `def word_break(s: str, word_dict: list[str]) -> bool:`",
+  "function_name": "word_break",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    },
+    {
+      "name": "word_dict",
+      "type": "list[str]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def word_break(s: str, word_dict: list[str]) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "leetcode",
+        "word_dict": [
+          "leet",
+          "code"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "applepenapple",
+        "word_dict": [
+          "apple",
+          "pen"
+        ]
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "catsandog",
+        "word_dict": [
+          "cats",
+          "dog",
+          "sand",
+          "and",
+          "cat"
+        ]
+      },
+      "expected": false
+    }
+  ]
+}

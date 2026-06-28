@@ -1,0 +1,20 @@
+{
+  "id": "verifying_alien_dictionary",
+  "title": "Verifying an Alien Dictionary",
+  "difficulty": "easy",
+  "description": "Solve the **Verifying an Alien Dictionary** problem on LeetCode.\n\nFunction signature: `def is_alien_sorted(words: list[str], order: str) -> bool:`",
+  "function_name": "is_alien_sorted",
+  "params": [
+    {
+      "name": "words",
+      "type": "list[str]"
+    },
+    {
+      "name": "order",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_alien_sorted(words: list[str], order: str) -> bool:\n    pass",
+  "test_cases": []
+}

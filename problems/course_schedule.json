@@ -1,0 +1,49 @@
+{
+  "id": "course_schedule",
+  "title": "Course Schedule",
+  "difficulty": "medium",
+  "description": "Solve the **Course Schedule** problem on LeetCode.\n\nFunction signature: `def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:`",
+  "function_name": "can_finish",
+  "params": [
+    {
+      "name": "num_courses",
+      "type": "int"
+    },
+    {
+      "name": "prerequisites",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "num_courses": 2,
+        "prerequisites": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "num_courses": 2,
+        "prerequisites": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": false
+    }
+  ]
+}

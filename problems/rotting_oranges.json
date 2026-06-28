@@ -1,0 +1,61 @@
+{
+  "id": "rotting_oranges",
+  "title": "Rotting Oranges",
+  "difficulty": "medium",
+  "description": "Solve the **Rotting Oranges** problem on LeetCode.\n\nFunction signature: `def oranges_rotting(grid: list[list[int]]) -> int:`",
+  "function_name": "oranges_rotting",
+  "params": [
+    {
+      "name": "grid",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def oranges_rotting(grid: list[list[int]]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "grid": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": 4
+    },
+    {
+      "input": {
+        "grid": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": -1
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "top_k_frequent_elements",
+  "title": "Top K Frequent Elements",
+  "difficulty": "medium",
+  "description": "Solve the **Top K Frequent Elements** problem on LeetCode.\n\nFunction signature: `def top_k_frequent(nums: list[int], k: int) -> list[int]:`",
+  "function_name": "top_k_frequent",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    },
+    {
+      "name": "k",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def top_k_frequent(nums: list[int], k: int) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ],
+        "k": 2
+      },
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "input": {
+        "nums": [
+          1
+        ],
+        "k": 1
+      },
+      "expected": [
+        1
+      ]
+    }
+  ]
+}

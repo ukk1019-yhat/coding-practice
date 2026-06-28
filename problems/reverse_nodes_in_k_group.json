@@ -1,0 +1,59 @@
+{
+  "id": "reverse_nodes_in_k_group",
+  "title": "Reverse Nodes in k-Group",
+  "difficulty": "hard",
+  "description": "Solve the **Reverse Nodes in k-Group** problem on LeetCode.\n\nFunction signature: `def reverse_k_group(head: list[int], k: int) -> list[int]:`",
+  "function_name": "reverse_k_group",
+  "params": [
+    {
+      "name": "head",
+      "type": "list[int]"
+    },
+    {
+      "name": "k",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def reverse_k_group(head: list[int], k: int) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "k": 2
+      },
+      "expected": [
+        2,
+        1,
+        4,
+        3,
+        5
+      ]
+    },
+    {
+      "input": {
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "k": 3
+      },
+      "expected": [
+        3,
+        2,
+        1,
+        4,
+        5
+      ]
+    }
+  ]
+}

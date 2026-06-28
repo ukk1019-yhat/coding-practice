@@ -1,0 +1,39 @@
+{
+  "id": "partition_equal_subset_sum",
+  "title": "Partition Equal Subset Sum",
+  "difficulty": "medium",
+  "description": "Solve the **Partition Equal Subset Sum** problem on LeetCode.\n\nFunction signature: `def can_partition(nums: list[int]) -> bool:`",
+  "function_name": "can_partition",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def can_partition(nums: list[int]) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          1,
+          5,
+          11,
+          5
+        ]
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "nums": [
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "clone_graph",
+  "title": "Clone Graph",
+  "difficulty": "medium",
+  "description": "Solve the **Clone Graph** problem on LeetCode.\n\nFunction signature: `def clone_graph(node: list[list[int]]) -> list[list[int]]:`",
+  "function_name": "clone_graph",
+  "params": [
+    {
+      "name": "node",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def clone_graph(node: list[list[int]]) -> list[list[int]]:\n    pass",
+  "test_cases": []
+}

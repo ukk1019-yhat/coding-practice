@@ -1,0 +1,35 @@
+{
+  "id": "multiply_strings",
+  "title": "Multiply Strings",
+  "difficulty": "medium",
+  "description": "Solve the **Multiply Strings** problem on LeetCode.\n\nFunction signature: `def multiply(num1: str, num2: str) -> str:`",
+  "function_name": "multiply",
+  "params": [
+    {
+      "name": "num1",
+      "type": "str"
+    },
+    {
+      "name": "num2",
+      "type": "str"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def multiply(num1: str, num2: str) -> str:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "num1": "2",
+        "num2": "3"
+      },
+      "expected": "6"
+    },
+    {
+      "input": {
+        "num1": "123",
+        "num2": "456"
+      },
+      "expected": "56088"
+    }
+  ]
+}

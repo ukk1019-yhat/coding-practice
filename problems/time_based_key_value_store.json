@@ -1,0 +1,11 @@
+{
+  "id": "time_based_key_value_store",
+  "title": "Time Based Key-Value Store",
+  "difficulty": "medium",
+  "description": "Solve the **Time Based Key-Value Store** problem on LeetCode.\n\nFunction signature: `class TimeMap:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class TimeMap:\n    def __init__(self):\n        pass\n    def set(self, key: str, value: str, timestamp: int) -> None:\n        pass\n    def get(self, key: str, timestamp: int) -> str:\n        pass",
+  "test_cases": []
+}

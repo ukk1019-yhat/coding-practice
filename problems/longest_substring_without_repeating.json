@@ -1,0 +1,35 @@
+{
+  "id": "longest_substring_without_repeating",
+  "title": "Longest Substring Without Repeating Characters",
+  "difficulty": "medium",
+  "description": "Solve the **Longest Substring Without Repeating Characters** problem on LeetCode.\n\nFunction signature: `def length_of_longest_substring(s: str) -> int:`",
+  "function_name": "length_of_longest_substring",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def length_of_longest_substring(s: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "abcabcbb"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "s": "bbbbb"
+      },
+      "expected": 1
+    },
+    {
+      "input": {
+        "s": "pwwkew"
+      },
+      "expected": 3
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "generate_parentheses",
+  "title": "Generate Parentheses",
+  "difficulty": "medium",
+  "description": "Solve the **Generate Parentheses** problem on LeetCode.\n\nFunction signature: `def generate_parenthesis(n: int) -> list[str]:`",
+  "function_name": "generate_parenthesis",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[str]",
+  "starter_code": "def generate_parenthesis(n: int) -> list[str]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 3
+      },
+      "expected": [
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()"
+      ]
+    },
+    {
+      "input": {
+        "n": 1
+      },
+      "expected": [
+        "()"
+      ]
+    }
+  ]
+}

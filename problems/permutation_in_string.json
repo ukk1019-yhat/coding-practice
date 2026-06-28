@@ -1,0 +1,35 @@
+{
+  "id": "permutation_in_string",
+  "title": "Permutation in String",
+  "difficulty": "medium",
+  "description": "Solve the **Permutation in String** problem on LeetCode.\n\nFunction signature: `def check_inclusion(s1: str, s2: str) -> bool:`",
+  "function_name": "check_inclusion",
+  "params": [
+    {
+      "name": "s1",
+      "type": "str"
+    },
+    {
+      "name": "s2",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def check_inclusion(s1: str, s2: str) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s1": "ab",
+        "s2": "eidbaooo"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s1": "ab",
+        "s2": "eidboaoo"
+      },
+      "expected": false
+    }
+  ]
+}

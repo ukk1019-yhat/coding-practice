@@ -1,0 +1,54 @@
+{
+  "id": "word_ladder",
+  "title": "Word Ladder",
+  "difficulty": "hard",
+  "description": "Solve the **Word Ladder** problem on LeetCode.\n\nFunction signature: `def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:`",
+  "function_name": "ladder_length",
+  "params": [
+    {
+      "name": "begin_word",
+      "type": "str"
+    },
+    {
+      "name": "end_word",
+      "type": "str"
+    },
+    {
+      "name": "word_list",
+      "type": "list[str]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "begin_word": "hit",
+        "end_word": "cog",
+        "word_list": [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log",
+          "cog"
+        ]
+      },
+      "expected": 5
+    },
+    {
+      "input": {
+        "begin_word": "hit",
+        "end_word": "cog",
+        "word_list": [
+          "hot",
+          "dot",
+          "dog",
+          "lot",
+          "log"
+        ]
+      },
+      "expected": 0
+    }
+  ]
+}

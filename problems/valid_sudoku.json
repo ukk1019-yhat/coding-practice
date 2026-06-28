@@ -1,0 +1,16 @@
+{
+  "id": "valid_sudoku",
+  "title": "Valid Sudoku",
+  "difficulty": "medium",
+  "description": "Solve the **Valid Sudoku** problem on LeetCode.\n\nFunction signature: `def is_valid_sudoku(board: list[list[str]]) -> bool:`",
+  "function_name": "is_valid_sudoku",
+  "params": [
+    {
+      "name": "board",
+      "type": "list[list[str]]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_valid_sudoku(board: list[list[str]]) -> bool:\n    pass",
+  "test_cases": []
+}

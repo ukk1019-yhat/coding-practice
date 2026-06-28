@@ -1,0 +1,16 @@
+{
+  "id": "diameter_of_binary_tree",
+  "title": "Diameter of Binary Tree",
+  "difficulty": "easy",
+  "description": "Solve the **Diameter of Binary Tree** problem on LeetCode.\n\nFunction signature: `def diameter_of_binary_tree(root: list[int]) -> int:`",
+  "function_name": "diameter_of_binary_tree",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def diameter_of_binary_tree(root: list[int]) -> int:\n    pass",
+  "test_cases": []
+}

@@ -1,0 +1,61 @@
+{
+  "id": "binary_tree_level_order_traversal",
+  "title": "Binary Tree Level Order Traversal",
+  "difficulty": "medium",
+  "description": "Solve the **Binary Tree Level Order Traversal** problem on LeetCode.\n\nFunction signature: `def level_order(root: list[int]) -> list[list[int]]:`",
+  "function_name": "level_order",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def level_order(root: list[int]) -> list[list[int]]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "root": [
+          3,
+          9,
+          20,
+          null,
+          null,
+          15,
+          7
+        ]
+      },
+      "expected": [
+        [
+          3
+        ],
+        [
+          9,
+          20
+        ],
+        [
+          15,
+          7
+        ]
+      ]
+    },
+    {
+      "input": {
+        "root": [
+          1
+        ]
+      },
+      "expected": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "input": {
+        "root": []
+      },
+      "expected": []
+    }
+  ]
+}

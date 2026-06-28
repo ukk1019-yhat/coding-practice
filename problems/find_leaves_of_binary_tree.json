@@ -1,0 +1,16 @@
+{
+  "id": "find_leaves_of_binary_tree",
+  "title": "Find Leaves of Binary Tree",
+  "difficulty": "medium",
+  "description": "Solve the **Find Leaves of Binary Tree** problem on LeetCode.\n\nFunction signature: `def find_leaves(root: list[int]) -> list[list[int]]:`",
+  "function_name": "find_leaves",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def find_leaves(root: list[int]) -> list[list[int]]:\n    pass",
+  "test_cases": []
+}

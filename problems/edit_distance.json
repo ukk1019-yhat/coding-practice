@@ -1,0 +1,35 @@
+{
+  "id": "edit_distance",
+  "title": "Edit Distance",
+  "difficulty": "medium",
+  "description": "Solve the **Edit Distance** problem on LeetCode.\n\nFunction signature: `def min_distance(word1: str, word2: str) -> int:`",
+  "function_name": "min_distance",
+  "params": [
+    {
+      "name": "word1",
+      "type": "str"
+    },
+    {
+      "name": "word2",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def min_distance(word1: str, word2: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "word1": "horse",
+        "word2": "ros"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "word1": "intention",
+        "word2": "execution"
+      },
+      "expected": 5
+    }
+  ]
+}

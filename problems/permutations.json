@@ -1,0 +1,76 @@
+{
+  "id": "permutations",
+  "title": "Permutations",
+  "difficulty": "medium",
+  "description": "Solve the **Permutations** problem on LeetCode.\n\nFunction signature: `def permute(nums: list[int]) -> list[list[int]]:`",
+  "function_name": "permute",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def permute(nums: list[int]) -> list[list[int]]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "input": {
+        "nums": [
+          0,
+          1
+        ]
+      },
+      "expected": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ]
+}

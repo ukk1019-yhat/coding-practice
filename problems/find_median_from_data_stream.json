@@ -1,0 +1,11 @@
+{
+  "id": "find_median_from_data_stream",
+  "title": "Find Median from Data Stream",
+  "difficulty": "hard",
+  "description": "Solve the **Find Median from Data Stream** problem on LeetCode.\n\nFunction signature: `class MedianFinder:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class MedianFinder:\n    def __init__(self):\n        pass\n    def add_num(self, num: int) -> None:\n        pass\n    def find_median(self) -> float:\n        pass",
+  "test_cases": []
+}

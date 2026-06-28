@@ -1,0 +1,59 @@
+{
+  "id": "koko_eating_bananas",
+  "title": "Koko Eating Bananas",
+  "difficulty": "medium",
+  "description": "Solve the **Koko Eating Bananas** problem on LeetCode.\n\nFunction signature: `def min_eating_speed(piles: list[int], h: int) -> int:`",
+  "function_name": "min_eating_speed",
+  "params": [
+    {
+      "name": "piles",
+      "type": "list[int]"
+    },
+    {
+      "name": "h",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def min_eating_speed(piles: list[int], h: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "piles": [
+          3,
+          6,
+          7,
+          11
+        ],
+        "h": 8
+      },
+      "expected": 4
+    },
+    {
+      "input": {
+        "piles": [
+          30,
+          11,
+          23,
+          4,
+          20
+        ],
+        "h": 5
+      },
+      "expected": 30
+    },
+    {
+      "input": {
+        "piles": [
+          30,
+          11,
+          23,
+          4,
+          20
+        ],
+        "h": 6
+      },
+      "expected": 23
+    }
+  ]
+}

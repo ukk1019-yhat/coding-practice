@@ -1,0 +1,11 @@
+{
+  "id": "moving_average_from_data_stream",
+  "title": "Moving Average from Data Stream",
+  "difficulty": "easy",
+  "description": "Solve the **Moving Average from Data Stream** problem on LeetCode.\n\nFunction signature: `class MovingAverage:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class MovingAverage:\n    def __init__(self, size: int):\n        pass\n    def next(self, val: int) -> float:\n        pass",
+  "test_cases": []
+}

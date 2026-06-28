@@ -1,0 +1,11 @@
+{
+  "id": "implement_trie",
+  "title": "Implement Trie (Prefix Tree)",
+  "difficulty": "medium",
+  "description": "Solve the **Implement Trie (Prefix Tree)** problem on LeetCode.\n\nFunction signature: `class Trie:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class Trie:\n    def __init__(self):\n        pass\n    def insert(self, word: str) -> None:\n        pass\n    def search(self, word: str) -> bool:\n        pass\n    def starts_with(self, prefix: str) -> bool:\n        pass",
+  "test_cases": []
+}

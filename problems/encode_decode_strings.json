@@ -1,0 +1,16 @@
+{
+  "id": "encode_decode_strings",
+  "title": "Encode and Decode Strings",
+  "difficulty": "medium",
+  "description": "Solve the **Encode and Decode Strings** problem on LeetCode.\n\nFunction signature: `def encode(strs: list[str]) -> str:`",
+  "function_name": "encode",
+  "params": [
+    {
+      "name": "strs",
+      "type": "list[str]"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def encode(strs: list[str]) -> str:\n    pass\n\ndef decode(s: str) -> list[str]:\n    pass",
+  "test_cases": []
+}

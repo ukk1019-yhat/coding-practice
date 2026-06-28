@@ -1,0 +1,69 @@
+{
+  "id": "combination_sum",
+  "title": "Combination Sum",
+  "difficulty": "medium",
+  "description": "Solve the **Combination Sum** problem on LeetCode.\n\nFunction signature: `def combination_sum(candidates: list[int], target: int) -> list[list[int]]:`",
+  "function_name": "combination_sum",
+  "params": [
+    {
+      "name": "candidates",
+      "type": "list[int]"
+    },
+    {
+      "name": "target",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def combination_sum(candidates: list[int], target: int) -> list[list[int]]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "candidates": [
+          2,
+          3,
+          6,
+          7
+        ],
+        "target": 7
+      },
+      "expected": [
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "input": {
+        "candidates": [
+          2,
+          3,
+          5
+        ],
+        "target": 8
+      },
+      "expected": [
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ]
+    }
+  ]
+}

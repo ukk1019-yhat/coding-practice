@@ -1,0 +1,11 @@
+{
+  "id": "design_tic_tac_toe",
+  "title": "Design Tic-Tac-Toe",
+  "difficulty": "medium",
+  "description": "Solve the **Design Tic-Tac-Toe** problem on LeetCode.\n\nFunction signature: `class TicTacToe:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class TicTacToe:\n    def __init__(self, n: int):\n        pass\n    def move(self, row: int, col: int, player: int) -> int:\n        pass",
+  "test_cases": []
+}

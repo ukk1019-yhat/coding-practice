@@ -1,0 +1,29 @@
+{
+  "id": "climbing_stairs",
+  "title": "Climbing Stairs",
+  "difficulty": "easy",
+  "description": "Solve the **Climbing Stairs** problem on LeetCode.\n\nFunction signature: `def climb_stairs(n: int) -> int:`",
+  "function_name": "climb_stairs",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def climb_stairs(n: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 2
+      },
+      "expected": 2
+    },
+    {
+      "input": {
+        "n": 3
+      },
+      "expected": 3
+    }
+  ]
+}

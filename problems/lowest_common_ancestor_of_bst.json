@@ -1,0 +1,65 @@
+{
+  "id": "lowest_common_ancestor_of_bst",
+  "title": "Lowest Common Ancestor of a Binary Search Tree",
+  "difficulty": "medium",
+  "description": "Solve the **Lowest Common Ancestor of a Binary Search Tree** problem on LeetCode.\n\nFunction signature: `def lowest_common_ancestor(root: list[int], p: int, q: int) -> int:`",
+  "function_name": "lowest_common_ancestor",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    },
+    {
+      "name": "p",
+      "type": "int"
+    },
+    {
+      "name": "q",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def lowest_common_ancestor(root: list[int], p: int, q: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "root": [
+          6,
+          2,
+          8,
+          0,
+          4,
+          7,
+          9,
+          null,
+          null,
+          3,
+          5
+        ],
+        "p": 2,
+        "q": 8
+      },
+      "expected": 6
+    },
+    {
+      "input": {
+        "root": [
+          6,
+          2,
+          8,
+          0,
+          4,
+          7,
+          9,
+          null,
+          null,
+          3,
+          5
+        ],
+        "p": 2,
+        "q": 4
+      },
+      "expected": 2
+    }
+  ]
+}

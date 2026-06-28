@@ -1,0 +1,61 @@
+{
+  "id": "fizz_buzz",
+  "title": "Fizz Buzz",
+  "difficulty": "easy",
+  "description": "Solve the **Fizz Buzz** problem on LeetCode.\n\nFunction signature: `def fizz_buzz(n: int) -> list[str]:`",
+  "function_name": "fizz_buzz",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[str]",
+  "starter_code": "def fizz_buzz(n: int) -> list[str]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 3
+      },
+      "expected": [
+        "1",
+        "2",
+        "Fizz"
+      ]
+    },
+    {
+      "input": {
+        "n": 5
+      },
+      "expected": [
+        "1",
+        "2",
+        "Fizz",
+        "4",
+        "Buzz"
+      ]
+    },
+    {
+      "input": {
+        "n": 15
+      },
+      "expected": [
+        "1",
+        "2",
+        "Fizz",
+        "4",
+        "Buzz",
+        "Fizz",
+        "7",
+        "8",
+        "Fizz",
+        "Buzz",
+        "11",
+        "Fizz",
+        "13",
+        "14",
+        "FizzBuzz"
+      ]
+    }
+  ]
+}

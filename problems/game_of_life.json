@@ -1,0 +1,16 @@
+{
+  "id": "game_of_life",
+  "title": "Game of Life",
+  "difficulty": "medium",
+  "description": "Solve the **Game of Life** problem on LeetCode.\n\nFunction signature: `def game_of_life(board: list[list[int]]) -> None:`",
+  "function_name": "game_of_life",
+  "params": [
+    {
+      "name": "board",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "None",
+  "starter_code": "def game_of_life(board: list[list[int]]) -> None:\n    \"\"\"Modify board in-place.\"\"\"\n    pass",
+  "test_cases": []
+}

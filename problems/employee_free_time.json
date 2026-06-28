@@ -1,0 +1,16 @@
+{
+  "id": "employee_free_time",
+  "title": "Employee Free Time",
+  "difficulty": "hard",
+  "description": "Solve the **Employee Free Time** problem on LeetCode.\n\nFunction signature: `def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:`",
+  "function_name": "employee_free_time",
+  "params": [
+    {
+      "name": "schedule",
+      "type": "list[list[list[int]]]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:\n    pass",
+  "test_cases": []
+}

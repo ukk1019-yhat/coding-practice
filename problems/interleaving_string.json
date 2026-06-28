@@ -1,0 +1,24 @@
+{
+  "id": "interleaving_string",
+  "title": "Interleaving String",
+  "difficulty": "medium",
+  "description": "Solve the **Interleaving String** problem on LeetCode.\n\nFunction signature: `def is_interleave(s1: str, s2: str, s3: str) -> bool:`",
+  "function_name": "is_interleave",
+  "params": [
+    {
+      "name": "s1",
+      "type": "str"
+    },
+    {
+      "name": "s2",
+      "type": "str"
+    },
+    {
+      "name": "s3",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_interleave(s1: str, s2: str, s3: str) -> bool:\n    pass",
+  "test_cases": []
+}

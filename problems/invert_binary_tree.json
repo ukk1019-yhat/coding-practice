@@ -1,0 +1,59 @@
+{
+  "id": "invert_binary_tree",
+  "title": "Invert Binary Tree",
+  "difficulty": "easy",
+  "description": "Solve the **Invert Binary Tree** problem on LeetCode.\n\nFunction signature: `def invert_tree(root: list[int]) -> list[int]:`",
+  "function_name": "invert_tree",
+  "params": [
+    {
+      "name": "root",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def invert_tree(root: list[int]) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "root": [
+          4,
+          2,
+          7,
+          1,
+          3,
+          6,
+          9
+        ]
+      },
+      "expected": [
+        4,
+        7,
+        2,
+        9,
+        6,
+        3,
+        1
+      ]
+    },
+    {
+      "input": {
+        "root": [
+          2,
+          1,
+          3
+        ]
+      },
+      "expected": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "input": {
+        "root": []
+      },
+      "expected": []
+    }
+  ]
+}

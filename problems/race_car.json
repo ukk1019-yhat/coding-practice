@@ -1,0 +1,16 @@
+{
+  "id": "race_car",
+  "title": "Race Car",
+  "difficulty": "hard",
+  "description": "Solve the **Race Car** problem on LeetCode.\n\nFunction signature: `def racecar(target: int) -> int:`",
+  "function_name": "racecar",
+  "params": [
+    {
+      "name": "target",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def racecar(target: int) -> int:\n    pass",
+  "test_cases": []
+}

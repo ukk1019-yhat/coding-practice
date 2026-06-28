@@ -1,0 +1,29 @@
+{
+  "id": "palindromic_substrings",
+  "title": "Palindromic Substrings",
+  "difficulty": "medium",
+  "description": "Solve the **Palindromic Substrings** problem on LeetCode.\n\nFunction signature: `def count_substrings(s: str) -> int:`",
+  "function_name": "count_substrings",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def count_substrings(s: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "abc"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "s": "aaa"
+      },
+      "expected": 6
+    }
+  ]
+}

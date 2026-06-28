@@ -1,0 +1,42 @@
+{
+  "id": "longest_common_subsequence",
+  "title": "Longest Common Subsequence",
+  "difficulty": "medium",
+  "description": "Solve the **Longest Common Subsequence** problem on LeetCode.\n\nFunction signature: `def longest_common_subsequence(text1: str, text2: str) -> int:`",
+  "function_name": "longest_common_subsequence",
+  "params": [
+    {
+      "name": "text1",
+      "type": "str"
+    },
+    {
+      "name": "text2",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def longest_common_subsequence(text1: str, text2: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "text1": "abcde",
+        "text2": "ace"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "text1": "abc",
+        "text2": "abc"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "text1": "abc",
+        "text2": "def"
+      },
+      "expected": 0
+    }
+  ]
+}

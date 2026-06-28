@@ -1,0 +1,35 @@
+{
+  "id": "roman_to_integer",
+  "title": "Roman to Integer",
+  "difficulty": "easy",
+  "description": "Solve the **Roman to Integer** problem on LeetCode.\n\nFunction signature: `def roman_to_int(s: str) -> int:`",
+  "function_name": "roman_to_int",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def roman_to_int(s: str) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "III"
+      },
+      "expected": 3
+    },
+    {
+      "input": {
+        "s": "LVIII"
+      },
+      "expected": 58
+    },
+    {
+      "input": {
+        "s": "MCMXCIV"
+      },
+      "expected": 1994
+    }
+  ]
+}

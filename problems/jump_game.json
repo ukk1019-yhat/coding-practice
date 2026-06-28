@@ -1,0 +1,41 @@
+{
+  "id": "jump_game",
+  "title": "Jump Game",
+  "difficulty": "medium",
+  "description": "Solve the **Jump Game** problem on LeetCode.\n\nFunction signature: `def can_jump(nums: list[int]) -> bool:`",
+  "function_name": "can_jump",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def can_jump(nums: list[int]) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          2,
+          3,
+          1,
+          1,
+          4
+        ]
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "nums": [
+          3,
+          2,
+          1,
+          0,
+          4
+        ]
+      },
+      "expected": false
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "last_stone_weight",
+  "title": "Last Stone Weight",
+  "difficulty": "easy",
+  "description": "Solve the **Last Stone Weight** problem on LeetCode.\n\nFunction signature: `def last_stone_weight(stones: list[int]) -> int:`",
+  "function_name": "last_stone_weight",
+  "params": [
+    {
+      "name": "stones",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def last_stone_weight(stones: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "stones": [
+          2,
+          7,
+          4,
+          1,
+          8,
+          1
+        ]
+      },
+      "expected": 1
+    }
+  ]
+}

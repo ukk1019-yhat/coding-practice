@@ -1,0 +1,29 @@
+{
+  "id": "reverse_bits",
+  "title": "Reverse Bits",
+  "difficulty": "easy",
+  "description": "Solve the **Reverse Bits** problem on LeetCode.\n\nFunction signature: `def reverse_bits(n: int) -> int:`",
+  "function_name": "reverse_bits",
+  "params": [
+    {
+      "name": "n",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def reverse_bits(n: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "n": 43261596
+      },
+      "expected": 964176192
+    },
+    {
+      "input": {
+        "n": 4294967293
+      },
+      "expected": 3221225471
+    }
+  ]
+}

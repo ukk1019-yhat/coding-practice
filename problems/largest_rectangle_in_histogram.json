@@ -1,0 +1,39 @@
+{
+  "id": "largest_rectangle_in_histogram",
+  "title": "Largest Rectangle in Histogram",
+  "difficulty": "hard",
+  "description": "Solve the **Largest Rectangle in Histogram** problem on LeetCode.\n\nFunction signature: `def largest_rectangle_area(heights: list[int]) -> int:`",
+  "function_name": "largest_rectangle_area",
+  "params": [
+    {
+      "name": "heights",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def largest_rectangle_area(heights: list[int]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "heights": [
+          2,
+          1,
+          5,
+          6,
+          2,
+          3
+        ]
+      },
+      "expected": 10
+    },
+    {
+      "input": {
+        "heights": [
+          2,
+          4
+        ]
+      },
+      "expected": 4
+    }
+  ]
+}

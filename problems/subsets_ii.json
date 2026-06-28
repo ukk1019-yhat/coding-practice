@@ -1,0 +1,61 @@
+{
+  "id": "subsets_ii",
+  "title": "Subsets II",
+  "difficulty": "medium",
+  "description": "Solve the **Subsets II** problem on LeetCode.\n\nFunction signature: `def subsets_with_dup(nums: list[int]) -> list[list[int]]:`",
+  "function_name": "subsets_with_dup",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "list[list[int]]",
+  "starter_code": "def subsets_with_dup(nums: list[int]) -> list[list[int]]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          1,
+          2,
+          2
+        ]
+      },
+      "expected": [
+        [],
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "input": {
+        "nums": [
+          0
+        ]
+      },
+      "expected": [
+        [],
+        [
+          0
+        ]
+      ]
+    }
+  ]
+}

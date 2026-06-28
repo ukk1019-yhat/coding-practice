@@ -1,0 +1,35 @@
+{
+  "id": "valid_parenthesis_string",
+  "title": "Valid Parenthesis String",
+  "difficulty": "medium",
+  "description": "Solve the **Valid Parenthesis String** problem on LeetCode.\n\nFunction signature: `def check_valid_string(s: str) -> bool:`",
+  "function_name": "check_valid_string",
+  "params": [
+    {
+      "name": "s",
+      "type": "str"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def check_valid_string(s: str) -> bool:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "s": "()"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "(*)"
+      },
+      "expected": true
+    },
+    {
+      "input": {
+        "s": "(*))"
+      },
+      "expected": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "find_first_and_last_position",
+  "title": "Find First and Last Position of Element in Sorted Array",
+  "difficulty": "medium",
+  "description": "Solve the **Find First and Last Position of Element in Sorted Array** problem on LeetCode.\n\nFunction signature: `def search_range(nums: list[int], target: int) -> list[int]:`",
+  "function_name": "search_range",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    },
+    {
+      "name": "target",
+      "type": "int"
+    }
+  ],
+  "return_type": "list[int]",
+  "starter_code": "def search_range(nums: list[int], target: int) -> list[int]:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "nums": [
+          5,
+          7,
+          7,
+          8,
+          8,
+          10
+        ],
+        "target": 8
+      },
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "input": {
+        "nums": [
+          5,
+          7,
+          7,
+          8,
+          8,
+          10
+        ],
+        "target": 6
+      },
+      "expected": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "input": {
+        "nums": [],
+        "target": 0
+      },
+      "expected": [
+        -1,
+        -1
+      ]
+    }
+  ]
+}

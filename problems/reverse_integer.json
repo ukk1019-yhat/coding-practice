@@ -1,0 +1,35 @@
+{
+  "id": "reverse_integer",
+  "title": "Reverse Integer",
+  "difficulty": "medium",
+  "description": "Solve the **Reverse Integer** problem on LeetCode.\n\nFunction signature: `def reverse(x: int) -> int:`",
+  "function_name": "reverse",
+  "params": [
+    {
+      "name": "x",
+      "type": "int"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def reverse(x: int) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "x": 123
+      },
+      "expected": 321
+    },
+    {
+      "input": {
+        "x": -123
+      },
+      "expected": -321
+    },
+    {
+      "input": {
+        "x": 120
+      },
+      "expected": 21
+    }
+  ]
+}

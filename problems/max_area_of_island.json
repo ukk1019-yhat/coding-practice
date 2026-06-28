@@ -1,0 +1,144 @@
+{
+  "id": "max_area_of_island",
+  "title": "Max Area of Island",
+  "difficulty": "medium",
+  "description": "Solve the **Max Area of Island** problem on LeetCode.\n\nFunction signature: `def max_area_of_island(grid: list[list[int]]) -> int:`",
+  "function_name": "max_area_of_island",
+  "params": [
+    {
+      "name": "grid",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def max_area_of_island(grid: list[list[int]]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "grid": [
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": 6
+    }
+  ]
+}

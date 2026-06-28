@@ -1,0 +1,20 @@
+{
+  "id": "hand_of_straights",
+  "title": "Hand of Straights",
+  "difficulty": "medium",
+  "description": "Solve the **Hand of Straights** problem on LeetCode.\n\nFunction signature: `def is_n_straight_hand(hand: list[int], group_size: int) -> bool:`",
+  "function_name": "is_n_straight_hand",
+  "params": [
+    {
+      "name": "hand",
+      "type": "list[int]"
+    },
+    {
+      "name": "group_size",
+      "type": "int"
+    }
+  ],
+  "return_type": "bool",
+  "starter_code": "def is_n_straight_hand(hand: list[int], group_size: int) -> bool:\n    pass",
+  "test_cases": []
+}

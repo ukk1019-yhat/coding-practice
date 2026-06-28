@@ -1,0 +1,11 @@
+{
+  "id": "add_and_search_word",
+  "title": "Add and Search Word",
+  "difficulty": "medium",
+  "description": "Solve the **Add and Search Word** problem on LeetCode.\n\nFunction signature: `class WordDictionary:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class WordDictionary:\n    def __init__(self):\n        pass\n    def add_word(self, word: str) -> None:\n        pass\n    def search(self, word: str) -> bool:\n        pass",
+  "test_cases": []
+}

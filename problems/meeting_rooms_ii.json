@@ -1,0 +1,51 @@
+{
+  "id": "meeting_rooms_ii",
+  "title": "Meeting Rooms II",
+  "difficulty": "medium",
+  "description": "Solve the **Meeting Rooms II** problem on LeetCode.\n\nFunction signature: `def min_meeting_rooms(intervals: list[list[int]]) -> int:`",
+  "function_name": "min_meeting_rooms",
+  "params": [
+    {
+      "name": "intervals",
+      "type": "list[list[int]]"
+    }
+  ],
+  "return_type": "int",
+  "starter_code": "def min_meeting_rooms(intervals: list[list[int]]) -> int:\n    pass",
+  "test_cases": [
+    {
+      "input": {
+        "intervals": [
+          [
+            0,
+            30
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            15,
+            20
+          ]
+        ]
+      },
+      "expected": 2
+    },
+    {
+      "input": {
+        "intervals": [
+          [
+            7,
+            10
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "expected": 1
+    }
+  ]
+}

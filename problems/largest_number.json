@@ -1,0 +1,16 @@
+{
+  "id": "largest_number",
+  "title": "Largest Number",
+  "difficulty": "medium",
+  "description": "Solve the **Largest Number** problem on LeetCode.\n\nFunction signature: `def largest_number(nums: list[int]) -> str:`",
+  "function_name": "largest_number",
+  "params": [
+    {
+      "name": "nums",
+      "type": "list[int]"
+    }
+  ],
+  "return_type": "str",
+  "starter_code": "def largest_number(nums: list[int]) -> str:\n    pass",
+  "test_cases": []
+}

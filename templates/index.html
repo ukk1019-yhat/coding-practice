@@ -9,7 +9,8 @@
 <body>
 <div id="app">
   <aside id="sidebar">
-    <h2>Problems</h2>
+    <h2>Problems (186)</h2>
+    <input id="search" type="text" placeholder="Search problems..." oninput="filterProblems(this.value)">
     <ul id="problem-list"></ul>
   </aside>
   <main id="main">
@@ -26,6 +27,13 @@
       <div id="editor-section">
         <textarea id="code-editor" spellcheck="false"></textarea>
         <div id="editor-actions">
+          <div id="mode-tabs">
+            <button class="mode-btn active" data-mode="test" onclick="switchMode('test')">Run Tests</button>
+            <button class="mode-btn" data-mode="custom" onclick="switchMode('custom')">Run Custom</button>
+          </div>
+          <div id="custom-input-area" style="display:none">
+            <textarea id="custom-input" placeholder="Paste your test code here&#10;Example: print(two_sum([2,7,11,15], 9))" spellcheck="false"></textarea>
+          </div>
           <button id="btn-run" onclick="runCode()">Run Tests</button>
         </div>
       </div>
@@ -39,14 +47,35 @@
 </div>
 <script>
 let currentProblemId = null;
+let currentMode = 'test';
+
+function switchMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+  document.getElementById('custom-input-area').style.display = mode === 'custom' ? 'block' : 'none';
+  document.getElementById('btn-run').textContent = mode === 'test' ? 'Run Tests' : 'Run Code';
+}
 
 async function loadProblems() {
   const res = await fetch('/api/problems');
   const problems = await res.json();
+  window.allProblems = problems;
+  renderProblems(problems);
+}
+
+function renderProblems(problems) {
   const list = document.getElementById('problem-list');
   list.innerHTML = problems.map(p =>
     `<li class="${p.difficulty}" onclick="loadProblem('${p.id}')">${escapeHtml(p.title)} <span class="diff-${p.difficulty}">${p.difficulty}</span></li>`
   ).join('');
+}
+
+function filterProblems(q) {
+  if (!window.allProblems) return;
+  const filtered = window.allProblems.filter(p =>
+    p.title.toLowerCase().includes(q.toLowerCase()) || p.id.includes(q.toLowerCase())
+  );
+  renderProblems(filtered);
 }
 
 async function loadProblem(id) {
@@ -60,9 +89,12 @@ async function loadProblem(id) {
   document.getElementById('problem-difficulty').className = 'badge ' + p.difficulty;
   document.getElementById('problem-description').innerHTML = marked(p.description);
   document.getElementById('code-editor').value = p.starter_code;
+  document.getElementById('custom-input').value =
+    `# Example: run your function with test input\nprint(${p.function_name}())`;
   document.getElementById('results').style.display = 'none';
   document.querySelectorAll('#problem-list li').forEach(el => el.classList.remove('active'));
-  document.querySelector(`#problem-list li[onclick*="${id}"]`)?.classList.add('active');
+  const match = document.querySelector(`#problem-list li[onclick*="${id}"]`);
+  if (match) match.classList.add('active');
 }
 
 function marked(text) {
@@ -84,47 +116,65 @@ async function runCode() {
   btn.textContent = 'Running...';
   document.getElementById('results').style.display = 'none';
 
-  const res = await fetch('/api/submit', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      problem_id: currentProblemId,
-      code: document.getElementById('code-editor').value
-    })
-  });
-  const data = await res.json();
-  btn.disabled = false;
-  btn.textContent = 'Run Tests';
-  showResults(data);
+  if (currentMode === 'test') {
+    const res = await fetch('/api/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        problem_id: currentProblemId,
+        code: document.getElementById('code-editor').value
+      })
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    btn.textContent = 'Run Tests';
+    showTestResults(data);
+  } else {
+    const customCode = document.getElementById('custom-input').value;
+    const userCode = document.getElementById('code-editor').value;
+    const fullCode = userCode + '\n' + customCode;
+    const res = await fetch('/api/run', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({code: fullCode})
+    });
+    const data = await res.json();
+    btn.disabled = false;
+    btn.textContent = 'Run Code';
+    showRunResults(data);
+  }
 }
 
-function showResults(data) {
+function showTestResults(data) {
   const el = document.getElementById('results');
   el.style.display = 'block';
+  document.getElementById('results-summary').innerHTML = '';
+  document.getElementById('results-detail').innerHTML = '';
 
   if (data.error) {
-    document.getElementById('results-summary').innerHTML = `<div class="error">${escapeHtml(data.error)}</div>`;
-    document.getElementById('results-detail').innerHTML = '';
+    document.getElementById('results-summary').innerHTML = `<div class="error"><strong>Error:</strong>\n${escapeHtml(data.error)}</div>`;
+    return;
+  }
+  if (!data.results || data.results.length === 0) {
+    document.getElementById('results-summary').innerHTML = `<div class="info">No test cases defined for this problem. Switch to "Run Custom" mode to test manually.</div>`;
     return;
   }
 
   const passed = data.results.filter(r => r.passed).length;
   const total = data.results.length;
-  const allPassed = data.all_passed;
-
   document.getElementById('results-summary').innerHTML =
-    `<div class="${allPassed ? 'pass' : 'fail'}">
-      ${passed}/${total} tests passed
-      ${allPassed ? ' ✓ All tests passed!' : ' ✗ Some tests failed'}
+    `<div class="${data.all_passed ? 'pass' : 'fail'}">
+      <strong>${passed}/${total} tests passed</strong>
+      ${data.all_passed ? ' ✓ All passed!' : ' ✗ Some failed'}
     </div>`;
 
-  document.getElementById('results-detail').innerHTML = data.results.map((r, i) =>
+  document.getElementById('results-detail').innerHTML += data.results.map((r, i) =>
     `<div class="test-case ${r.passed ? 'pass' : 'fail'}">
-      <strong>Test ${i + 1}:</strong> ${r.passed ? '✓ PASS' : '✗ FAIL'}
+      <strong>Test ${i+1}:</strong> ${r.passed ? '✓ PASS' : '✗ FAIL'}
       <br>Input: <code>${escapeHtml(JSON.stringify(r.input))}</code>
       <br>Expected: <code>${escapeHtml(JSON.stringify(r.expected))}</code>
       <br>Actual: <code>${escapeHtml(JSON.stringify(r.actual))}</code>
-      ${r.time_ms !== null ? `<br>Time: ${r.time_ms}ms` : ''}
+      ${r.time_ms !== null ? `<br>⏱ ${r.time_ms}ms` : ''}
     </div>`
   ).join('');
 
@@ -132,6 +182,22 @@ function showResults(data) {
     document.getElementById('results-detail').innerHTML +=
       `<div class="stdout"><strong>stdout:</strong><pre>${escapeHtml(data.stdout)}</pre></div>`;
   }
+}
+
+function showRunResults(data) {
+  const el = document.getElementById('results');
+  el.style.display = 'block';
+  document.getElementById('results-summary').innerHTML = '';
+  document.getElementById('results-detail').innerHTML = '';
+
+  if (data.error) {
+    document.getElementById('results-summary').innerHTML = `<div class="error"><strong>Error:</strong>\n${escapeHtml(data.error)}</div>`;
+    return;
+  }
+
+  document.getElementById('results-summary').innerHTML = `<div class="pass"><strong>Execution completed</strong></div>`;
+  document.getElementById('results-detail').innerHTML =
+    `<div class="stdout"><strong>Output:</strong><pre>${escapeHtml(data.stdout || '(no output)')}</pre></div>`;
 }
 
 loadProblems();

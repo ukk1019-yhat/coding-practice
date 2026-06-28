@@ -1,0 +1,11 @@
+{
+  "id": "logger_rate_limiter",
+  "title": "Logger Rate Limiter",
+  "difficulty": "easy",
+  "description": "Solve the **Logger Rate Limiter** problem on LeetCode.\n\nFunction signature: `class Logger:`",
+  "function_name": "__init__",
+  "params": [],
+  "return_type": "None",
+  "starter_code": "class Logger:\n    def __init__(self):\n        pass\n    def should_print_message(self, timestamp: int, message: str) -> bool:\n        pass",
+  "test_cases": []
+}
