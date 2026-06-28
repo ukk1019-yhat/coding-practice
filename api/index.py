@@ -6,16 +6,12 @@ from contextlib import redirect_stdout, redirect_stderr
 from io import StringIO
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-import sys
 import time
 import concurrent.futures
 
 app = FastAPI()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 problems_cache = None
 
@@ -34,8 +30,9 @@ def load_problems():
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    problems = load_problems()
-    return templates.TemplateResponse("index.html", {"request": request, "problems": list(problems.values())})
+    html_path = BASE_DIR / "templates" / "index.html"
+    html_content = html_path.read_text(encoding="utf-8")
+    return HTMLResponse(html_content)
 
 @app.get("/api/problems")
 async def list_problems():
