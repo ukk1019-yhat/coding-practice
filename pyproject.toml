@@ -15,3 +15,7 @@ python_functions = ["test_*"]
 
 [tool.vercel]
 entrypoint = "api/index.py"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
