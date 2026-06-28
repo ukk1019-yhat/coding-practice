@@ -3,57 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coding Practice</title>
+<title>CodePractice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 <div id="app">
   <aside id="sidebar">
-    <h2>Problems (186)</h2>
-    <input id="search" type="text" placeholder="Search problems..." oninput="filterProblems(this.value)">
-    <ul id="problem-list"></ul>
+    <div id="sidebar-header">
+      <h1>Code<span>Practice</span></h1>
+      <p id="problem-count">186 problems</p>
+    </div>
+    <div id="search-wrap">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="search" type="text" placeholder="Search problems..." oninput="filterProblems(this.value)">
+    </div>
+    <div id="problem-list-wrap"><div id="problem-list"></div></div>
   </aside>
+
   <main id="main">
     <div id="welcome">
-      <h1>Coding Practice</h1>
-      <p>Select a problem from the sidebar to get started.</p>
+      <div class="logo-icon">&lt;/&gt;</div>
+      <h1>CodePractice</h1>
+      <p>Select a problem from the sidebar to start coding.</p>
     </div>
-    <div id="problem-view" style="display:none">
-      <div id="problem-header">
+
+    <div id="problem-view">
+      <div id="top-bar">
         <h2 id="problem-title"></h2>
         <span id="problem-difficulty" class="badge"></span>
       </div>
-      <div id="problem-description"></div>
-      <div id="editor-section">
-        <textarea id="code-editor" spellcheck="false"></textarea>
-        <div id="editor-actions">
-          <div id="mode-tabs">
-            <button class="mode-btn active" data-mode="test" onclick="switchMode('test')">Run Tests</button>
-            <button class="mode-btn" data-mode="custom" onclick="switchMode('custom')">Run Custom</button>
+
+      <div id="content-split">
+        <div id="left-panel">
+          <div class="panel-tabs">
+            <div class="panel-tab active" data-tab="desc" onclick="switchPanelTab('desc')">Description</div>
+            <div class="panel-tab" data-tab="results" onclick="switchPanelTab('results')">Results</div>
           </div>
-          <div id="custom-input-area" style="display:none">
-            <textarea id="custom-input" placeholder="Paste your test code here&#10;Example: print(two_sum([2,7,11,15], 9))" spellcheck="false"></textarea>
+          <div class="panel-content active" id="panel-desc">
+            <div id="problem-description"></div>
           </div>
-          <button id="btn-run" onclick="runCode()">Run Tests</button>
+          <div class="panel-content" id="panel-results">
+            <div id="results">
+              <div id="results-header">
+                <h3>Test Results</h3>
+                <div id="results-summary"></div>
+              </div>
+              <div id="results-body"></div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="results" style="display:none">
-        <h3>Results</h3>
-        <div id="results-summary"></div>
-        <div id="results-detail"></div>
+
+        <div id="right-panel">
+          <div id="editor-wrap"><div id="monaco-container"></div></div>
+          <div id="editor-footer">
+            <div id="mode-tabs">
+              <button class="mode-btn active" data-mode="test" onclick="switchMode('test')">Tests</button>
+              <button class="mode-btn" data-mode="custom" onclick="switchMode('custom')">Custom</button>
+            </div>
+            <div id="custom-input-area">
+              <textarea id="custom-input" placeholder="# Call your function here&#10;print(two_sum([2,7,11,15], 9))" spellcheck="false"></textarea>
+            </div>
+            <button id="btn-run" onclick="runCode()">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Run</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js"></script>
 <script>
 let currentProblemId = null;
 let currentMode = 'test';
+let editor = null;
+
+require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs' }});
+require(['vs/editor/editor.main'], function() {
+  editor = monaco.editor.create(document.getElementById('monaco-container'), {
+    language: 'python',
+    theme: 'vs-dark',
+    fontSize: 13,
+    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
+    fontLigatures: true,
+    minimap: { enabled: false },
+    lineNumbers: 'on',
+    scrollBeyondLastLine: false,
+    padding: { top: 12, bottom: 12 },
+    automaticLayout: true,
+    tabSize: 4,
+    renderWhitespace: 'selection',
+    smoothScrolling: true,
+    cursorBlinking: 'smooth',
+    cursorSmoothCaretAnimation: 'on',
+    bracketPairColorization: { enabled: true },
+    guides: { indentation: true, bracketPairs: true },
+    suggest: { showMethods: true, showFunctions: true, showKeywords: true },
+  });
+  loadProblems();
+});
+
+function switchPanelTab(tab) {
+  document.querySelectorAll('.panel-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  document.querySelectorAll('.panel-content').forEach(p => p.classList.toggle('active', p.id === 'panel-' + tab));
+}
 
 function switchMode(mode) {
   currentMode = mode;
   document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
-  document.getElementById('custom-input-area').style.display = mode === 'custom' ? 'block' : 'none';
-  document.getElementById('btn-run').textContent = mode === 'test' ? 'Run Tests' : 'Run Code';
+  document.getElementById('custom-input-area').classList.toggle('show', mode === 'custom');
+  document.querySelector('#btn-run span').textContent = mode === 'test' ? 'Run' : 'Run';
 }
 
 async function loadProblems() {
@@ -65,142 +129,177 @@ async function loadProblems() {
 
 function renderProblems(problems) {
   const list = document.getElementById('problem-list');
-  list.innerHTML = problems.map(p =>
-    `<li class="${p.difficulty}" onclick="loadProblem('${p.id}')">${escapeHtml(p.title)} <span class="diff-${p.difficulty}">${p.difficulty}</span></li>`
+  list.innerHTML = problems.map((p, i) =>
+    `<div class="problem-item ${p.difficulty}" data-id="${p.id}" onclick="loadProblem('${p.id}')">
+      <div class="num">${i + 1}</div>
+      <span class="title">${esc(p.title)}</span>
+      <span class="diff diff-${p.difficulty}">${p.difficulty}</span>
+    </div>`
   ).join('');
 }
 
 function filterProblems(q) {
   if (!window.allProblems) return;
-  const filtered = window.allProblems.filter(p =>
-    p.title.toLowerCase().includes(q.toLowerCase()) || p.id.includes(q.toLowerCase())
+  const f = window.allProblems.filter(p =>
+    p.title.toLowerCase().includes(q.toLowerCase())
   );
-  renderProblems(filtered);
+  renderProblems(f);
+  document.getElementById('problem-count').textContent = f.length + ' problem' + (f.length !== 1 ? 's' : '');
 }
 
 async function loadProblem(id) {
   currentProblemId = id;
-  const res = await fetch(`/api/problems/${id}`);
+  const res = await fetch('/api/problems/' + id);
   const p = await res.json();
+
   document.getElementById('welcome').style.display = 'none';
-  document.getElementById('problem-view').style.display = 'block';
+  document.getElementById('problem-view').style.display = 'flex';
   document.getElementById('problem-title').textContent = p.title;
-  document.getElementById('problem-difficulty').textContent = p.difficulty;
-  document.getElementById('problem-difficulty').className = 'badge ' + p.difficulty;
-  document.getElementById('problem-description').innerHTML = marked(p.description);
-  document.getElementById('code-editor').value = p.starter_code;
-  document.getElementById('custom-input').value =
-    `# Example: run your function with test input\nprint(${p.function_name}())`;
-  document.getElementById('results').style.display = 'none';
-  document.querySelectorAll('#problem-list li').forEach(el => el.classList.remove('active'));
-  const match = document.querySelector(`#problem-list li[onclick*="${id}"]`);
+  const diffEl = document.getElementById('problem-difficulty');
+  diffEl.textContent = p.difficulty;
+  diffEl.className = 'badge ' + p.difficulty;
+
+  const desc = document.getElementById('problem-description');
+  desc.innerHTML = marked(p.description);
+  desc.querySelectorAll('pre code').forEach(b => {
+    b.innerHTML = esc(b.textContent);
+  });
+
+  if (editor) {
+    editor.setValue(p.starter_code);
+    editor.revealLineInCenter(1);
+    editor.focus();
+  }
+
+  document.getElementById('custom-input').value = '# Call your function\nprint(' + p.function_name + '())';
+  switchPanelTab('desc');
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('results-body').innerHTML = '';
+  document.getElementById('results-summary').innerHTML = '';
+
+  document.querySelectorAll('.problem-item').forEach(el => el.classList.remove('active'));
+  const match = document.querySelector('.problem-item[data-id="' + id + '"]');
   if (match) match.classList.add('active');
 }
 
 function marked(text) {
   return text.split('\n').map(line => {
-    if (line.startsWith('```')) return '<pre><code>' + escapeHtml(line.slice(3)) + '</code></pre>';
-    return '<p>' + escapeHtml(line) + '</p>';
+    if (line.startsWith('```')) return '<pre><code>' + esc(line.slice(3)) + '</code></pre>';
+    if (line.startsWith('## ')) return '<h3>' + esc(line.slice(3)) + '</h3>';
+    if (line.startsWith('- ')) return '<li>' + esc(line.slice(2)) + '</li>';
+    return '<p>' + esc(line) + '</p>';
   }).join('');
 }
 
-function escapeHtml(text) {
+function esc(text) {
   const d = document.createElement('div');
   d.textContent = text;
   return d.innerHTML;
 }
 
+function getCode() {
+  return editor ? editor.getValue() : '';
+}
+
 async function runCode() {
   const btn = document.getElementById('btn-run');
   btn.disabled = true;
-  btn.textContent = 'Running...';
-  document.getElementById('results').style.display = 'none';
+  const span = btn.querySelector('span');
+  const origText = span.textContent;
+  span.textContent = 'Running…';
+
+  switchPanelTab('results');
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.remove('show');
+  document.getElementById('results-body').innerHTML = '';
+  document.getElementById('results-summary').innerHTML = '';
 
   if (currentMode === 'test') {
     const res = await fetch('/api/submit', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        problem_id: currentProblemId,
-        code: document.getElementById('code-editor').value
-      })
+      body: JSON.stringify({ problem_id: currentProblemId, code: getCode() })
     });
     const data = await res.json();
     btn.disabled = false;
-    btn.textContent = 'Run Tests';
+    span.textContent = origText;
     showTestResults(data);
   } else {
     const customCode = document.getElementById('custom-input').value;
-    const userCode = document.getElementById('code-editor').value;
-    const fullCode = userCode + '\n' + customCode;
     const res = await fetch('/api/run', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({code: fullCode})
+      body: JSON.stringify({ code: getCode() + '\n' + customCode })
     });
     const data = await res.json();
     btn.disabled = false;
-    btn.textContent = 'Run Code';
+    span.textContent = origText;
     showRunResults(data);
   }
 }
 
 function showTestResults(data) {
   const el = document.getElementById('results');
-  el.style.display = 'block';
-  document.getElementById('results-summary').innerHTML = '';
-  document.getElementById('results-detail').innerHTML = '';
+  el.classList.add('show');
+  const summary = document.getElementById('results-summary');
+  const body = document.getElementById('results-body');
 
   if (data.error) {
-    document.getElementById('results-summary').innerHTML = `<div class="error"><strong>Error:</strong>\n${escapeHtml(data.error)}</div>`;
+    summary.innerHTML = '<div class="error">' + esc(data.error) + '</div>';
     return;
   }
   if (!data.results || data.results.length === 0) {
-    document.getElementById('results-summary').innerHTML = `<div class="info">No test cases defined for this problem. Switch to "Run Custom" mode to test manually.</div>`;
+    summary.innerHTML = '<div class="info">No test cases. Switch to Custom to test manually.</div>';
     return;
   }
 
   const passed = data.results.filter(r => r.passed).length;
   const total = data.results.length;
-  document.getElementById('results-summary').innerHTML =
-    `<div class="${data.all_passed ? 'pass' : 'fail'}">
-      <strong>${passed}/${total} tests passed</strong>
-      ${data.all_passed ? ' ✓ All passed!' : ' ✗ Some failed'}
-    </div>`;
+  const allPassed = data.all_passed;
+  summary.innerHTML = '<div class="' + (allPassed ? 'pass' : 'fail') + '">' + passed + '/' + total + (allPassed ? ' passed' : ' failed') + '</div>';
 
-  document.getElementById('results-detail').innerHTML += data.results.map((r, i) =>
-    `<div class="test-case ${r.passed ? 'pass' : 'fail'}">
-      <strong>Test ${i+1}:</strong> ${r.passed ? '✓ PASS' : '✗ FAIL'}
-      <br>Input: <code>${escapeHtml(JSON.stringify(r.input))}</code>
-      <br>Expected: <code>${escapeHtml(JSON.stringify(r.expected))}</code>
-      <br>Actual: <code>${escapeHtml(JSON.stringify(r.actual))}</code>
-      ${r.time_ms !== null ? `<br>⏱ ${r.time_ms}ms` : ''}
-    </div>`
+  body.innerHTML = data.results.map((r, i) =>
+    '<div class="test-case ' + (r.passed ? 'pass' : 'fail') + '">' +
+      '<div class="tc-head">' +
+        '<span class="icon ' + (r.passed ? 'pass' : 'fail') + '">' + (r.passed ? '\u2713' : '\u2717') + '</span>' +
+        '<span>Test ' + (i + 1) + '</span>' +
+        (r.time_ms !== null ? '<span class="tc-time">' + r.time_ms + 'ms</span>' : '') +
+      '</div>' +
+      '<div class="tc-detail">' +
+        'Input: <code>' + esc(JSON.stringify(r.input)) + '</code><br>' +
+        'Expected: <code>' + esc(JSON.stringify(r.expected)) + '</code><br>' +
+        'Actual: <code>' + esc(JSON.stringify(r.actual)) + '</code>' +
+      '</div>' +
+    '</div>'
   ).join('');
 
   if (data.stdout) {
-    document.getElementById('results-detail').innerHTML +=
-      `<div class="stdout"><strong>stdout:</strong><pre>${escapeHtml(data.stdout)}</pre></div>`;
+    body.innerHTML +=
+      '<details class="stdout-box">' +
+        '<summary>stdout</summary>' +
+        '<pre>' + esc(data.stdout) + '</pre>' +
+      '</details>';
   }
 }
 
 function showRunResults(data) {
   const el = document.getElementById('results');
-  el.style.display = 'block';
-  document.getElementById('results-summary').innerHTML = '';
-  document.getElementById('results-detail').innerHTML = '';
+  el.classList.add('show');
+  const summary = document.getElementById('results-summary');
+  const body = document.getElementById('results-body');
 
   if (data.error) {
-    document.getElementById('results-summary').innerHTML = `<div class="error"><strong>Error:</strong>\n${escapeHtml(data.error)}</div>`;
+    summary.innerHTML = '<div class="error">' + esc(data.error) + '</div>';
     return;
   }
 
-  document.getElementById('results-summary').innerHTML = `<div class="pass"><strong>Execution completed</strong></div>`;
-  document.getElementById('results-detail').innerHTML =
-    `<div class="stdout"><strong>Output:</strong><pre>${escapeHtml(data.stdout || '(no output)')}</pre></div>`;
+  summary.innerHTML = '<div class="pass">Execution completed</div>';
+  body.innerHTML =
+    '<div class="stdout-box" open>' +
+      '<summary style="cursor:default">Output</summary>' +
+      '<pre>' + esc(data.stdout || '(no output)') + '</pre>' +
+    '</div>';
 }
-
-loadProblems();
 </script>
 </body>
 </html>
