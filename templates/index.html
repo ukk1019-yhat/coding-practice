@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding Practice</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <h2>Problems</h2>
+    <ul id="problem-list"></ul>
+  </aside>
+  <main id="main">
+    <div id="welcome">
+      <h1>Coding Practice</h1>
+      <p>Select a problem from the sidebar to get started.</p>
+    </div>
+    <div id="problem-view" style="display:none">
+      <div id="problem-header">
+        <h2 id="problem-title"></h2>
+        <span id="problem-difficulty" class="badge"></span>
+      </div>
+      <div id="problem-description"></div>
+      <div id="editor-section">
+        <textarea id="code-editor" spellcheck="false"></textarea>
+        <div id="editor-actions">
+          <button id="btn-run" onclick="runCode()">Run Tests</button>
+        </div>
+      </div>
+      <div id="results" style="display:none">
+        <h3>Results</h3>
+        <div id="results-summary"></div>
+        <div id="results-detail"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script>
+let currentProblemId = null;
+
+async function loadProblems() {
+  const res = await fetch('/api/problems');
+  const problems = await res.json();
+  const list = document.getElementById('problem-list');
+  list.innerHTML = problems.map(p =>
+    `<li class="${p.difficulty}" onclick="loadProblem('${p.id}')">${escapeHtml(p.title)} <span class="diff-${p.difficulty}">${p.difficulty}</span></li>`
+  ).join('');
+}
+
+async function loadProblem(id) {
+  currentProblemId = id;
+  const res = await fetch(`/api/problems/${id}`);
+  const p = await res.json();
+  document.getElementById('welcome').style.display = 'none';
+  document.getElementById('problem-view').style.display = 'block';
+  document.getElementById('problem-title').textContent = p.title;
+  document.getElementById('problem-difficulty').textContent = p.difficulty;
+  document.getElementById('problem-difficulty').className = 'badge ' + p.difficulty;
+  document.getElementById('problem-description').innerHTML = marked(p.description);
+  document.getElementById('code-editor').value = p.starter_code;
+  document.getElementById('results').style.display = 'none';
+  document.querySelectorAll('#problem-list li').forEach(el => el.classList.remove('active'));
+  document.querySelector(`#problem-list li[onclick*="${id}"]`)?.classList.add('active');
+}
+
+function marked(text) {
+  return text.split('\n').map(line => {
+    if (line.startsWith('```')) return '<pre><code>' + escapeHtml(line.slice(3)) + '</code></pre>';
+    return '<p>' + escapeHtml(line) + '</p>';
+  }).join('');
+}
+
+function escapeHtml(text) {
+  const d = document.createElement('div');
+  d.textContent = text;
+  return d.innerHTML;
+}
+
+async function runCode() {
+  const btn = document.getElementById('btn-run');
+  btn.disabled = true;
+  btn.textContent = 'Running...';
+  document.getElementById('results').style.display = 'none';
+
+  const res = await fetch('/api/submit', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      problem_id: currentProblemId,
+      code: document.getElementById('code-editor').value
+    })
+  });
+  const data = await res.json();
+  btn.disabled = false;
+  btn.textContent = 'Run Tests';
+  showResults(data);
+}
+
+function showResults(data) {
+  const el = document.getElementById('results');
+  el.style.display = 'block';
+
+  if (data.error) {
+    document.getElementById('results-summary').innerHTML = `<div class="error">${escapeHtml(data.error)}</div>`;
+    document.getElementById('results-detail').innerHTML = '';
+    return;
+  }
+
+  const passed = data.results.filter(r => r.passed).length;
+  const total = data.results.length;
+  const allPassed = data.all_passed;
+
+  document.getElementById('results-summary').innerHTML =
+    `<div class="${allPassed ? 'pass' : 'fail'}">
+      ${passed}/${total} tests passed
+      ${allPassed ? ' ✓ All tests passed!' : ' ✗ Some tests failed'}
+    </div>`;
+
+  document.getElementById('results-detail').innerHTML = data.results.map((r, i) =>
+    `<div class="test-case ${r.passed ? 'pass' : 'fail'}">
+      <strong>Test ${i + 1}:</strong> ${r.passed ? '✓ PASS' : '✗ FAIL'}
+      <br>Input: <code>${escapeHtml(JSON.stringify(r.input))}</code>
+      <br>Expected: <code>${escapeHtml(JSON.stringify(r.expected))}</code>
+      <br>Actual: <code>${escapeHtml(JSON.stringify(r.actual))}</code>
+      ${r.time_ms !== null ? `<br>Time: ${r.time_ms}ms` : ''}
+    </div>`
+  ).join('');
+
+  if (data.stdout) {
+    document.getElementById('results-detail').innerHTML +=
+      `<div class="stdout"><strong>stdout:</strong><pre>${escapeHtml(data.stdout)}</pre></div>`;
+  }
+}
+
+loadProblems();
+</script>
+</body>
+</html>
