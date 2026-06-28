@@ -3,31 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CodePractice</title>
+<title>CodePractice — Coding Problem Solver</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+
+<div id="topnav">
+  <div class="logo">
+    <div class="mark">&lt;/&gt;</div>
+    Code<span>Practice</span>
+  </div>
+  <div class="nav-spacer"></div>
+  <div class="stats">
+    <span id="stat-total">186 problems</span>
+    <span id="stat-easy">Easy: <strong>0</strong></span>
+    <span id="stat-medium">Medium: <strong>0</strong></span>
+    <span id="stat-hard">Hard: <strong>0</strong></span>
+  </div>
+</div>
+
 <div id="app">
   <aside id="sidebar">
     <div id="sidebar-header">
-      <h1>Code<span>Practice</span></h1>
-      <p id="problem-count">186 problems</p>
-    </div>
-    <div id="search-wrap">
-      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input id="search" type="text" placeholder="Search problems..." oninput="filterProblems(this.value)">
+      <div id="search-wrap">
+        <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search" type="text" placeholder="Search problems..." oninput="filterProblems(this.value)">
+      </div>
     </div>
     <div id="problem-list-wrap"><div id="problem-list"></div></div>
   </aside>
 
   <main id="main">
     <div id="welcome">
-      <div class="logo-icon">&lt;/&gt;</div>
+      <div class="big-mark">&lt;/&gt;</div>
       <h1>CodePractice</h1>
-      <p>Select a problem from the sidebar to start coding.</p>
+      <p>Choose a problem from the sidebar to get started.</p>
     </div>
 
     <div id="problem-view">
@@ -48,7 +61,7 @@
           <div class="panel-content" id="panel-results">
             <div id="results">
               <div id="results-header">
-                <h3>Test Results</h3>
+                <h3>Results</h3>
                 <div id="results-summary"></div>
               </div>
               <div id="results-body"></div>
@@ -64,11 +77,11 @@
               <button class="mode-btn" data-mode="custom" onclick="switchMode('custom')">Custom</button>
             </div>
             <div id="custom-input-area">
-              <textarea id="custom-input" placeholder="# Call your function here&#10;print(two_sum([2,7,11,15], 9))" spellcheck="false"></textarea>
+              <textarea id="custom-input" placeholder="# Call your function here, e.g.:&#10;print(two_sum([2,7,11,15], 9))" spellcheck="false"></textarea>
             </div>
             <button id="btn-run" onclick="runCode()">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span>Run</span>
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Run
             </button>
           </div>
         </div>
@@ -89,8 +102,7 @@ require(['vs/editor/editor.main'], function() {
     language: 'python',
     theme: 'vs-dark',
     fontSize: 13,
-    fontFamily: "'JetBrains Mono', 'Fira Code', monospace",
-    fontLigatures: true,
+    fontFamily: "'JetBrains Mono', 'SF Mono', 'Fira Code', monospace",
     minimap: { enabled: false },
     lineNumbers: 'on',
     scrollBeyondLastLine: false,
@@ -98,12 +110,8 @@ require(['vs/editor/editor.main'], function() {
     automaticLayout: true,
     tabSize: 4,
     renderWhitespace: 'selection',
-    smoothScrolling: true,
     cursorBlinking: 'smooth',
-    cursorSmoothCaretAnimation: 'on',
     bracketPairColorization: { enabled: true },
-    guides: { indentation: true, bracketPairs: true },
-    suggest: { showMethods: true, showFunctions: true, showKeywords: true },
   });
   loadProblems();
 });
@@ -117,7 +125,6 @@ function switchMode(mode) {
   currentMode = mode;
   document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
   document.getElementById('custom-input-area').classList.toggle('show', mode === 'custom');
-  document.querySelector('#btn-run span').textContent = mode === 'test' ? 'Run' : 'Run';
 }
 
 async function loadProblems() {
@@ -125,26 +132,29 @@ async function loadProblems() {
   const problems = await res.json();
   window.allProblems = problems;
   renderProblems(problems);
+  const counts = { easy: 0, medium: 0, hard: 0 };
+  problems.forEach(p => counts[p.difficulty]++);
+  document.getElementById('stat-easy').innerHTML = 'Easy: <strong>' + counts.easy + '</strong>';
+  document.getElementById('stat-medium').innerHTML = 'Medium: <strong>' + counts.medium + '</strong>';
+  document.getElementById('stat-hard').innerHTML = 'Hard: <strong>' + counts.hard + '</strong>';
 }
 
 function renderProblems(problems) {
   const list = document.getElementById('problem-list');
   list.innerHTML = problems.map((p, i) =>
-    `<div class="problem-item ${p.difficulty}" data-id="${p.id}" onclick="loadProblem('${p.id}')">
-      <div class="num">${i + 1}</div>
-      <span class="title">${esc(p.title)}</span>
-      <span class="diff diff-${p.difficulty}">${p.difficulty}</span>
-    </div>`
+    '<div class="problem-item" data-id="' + p.id + '" onclick="loadProblem(\'' + p.id + '\')">' +
+      '<div class="num">' + (i + 1) + '</div>' +
+      '<span class="title">' + esc(p.title) + '</span>' +
+      '<span class="diff diff-' + p.difficulty + '">' + p.difficulty + '</span>' +
+    '</div>'
   ).join('');
 }
 
 function filterProblems(q) {
   if (!window.allProblems) return;
-  const f = window.allProblems.filter(p =>
-    p.title.toLowerCase().includes(q.toLowerCase())
-  );
+  const f = window.allProblems.filter(p => p.title.toLowerCase().includes(q.toLowerCase()));
   renderProblems(f);
-  document.getElementById('problem-count').textContent = f.length + ' problem' + (f.length !== 1 ? 's' : '');
+  document.getElementById('stat-total').textContent = f.length + ' problem' + (f.length !== 1 ? 's' : '');
 }
 
 async function loadProblem(id) {
@@ -159,11 +169,7 @@ async function loadProblem(id) {
   diffEl.textContent = p.difficulty;
   diffEl.className = 'badge ' + p.difficulty;
 
-  const desc = document.getElementById('problem-description');
-  desc.innerHTML = marked(p.description);
-  desc.querySelectorAll('pre code').forEach(b => {
-    b.innerHTML = esc(b.textContent);
-  });
+  document.getElementById('problem-description').innerHTML = marked(p.description);
 
   if (editor) {
     editor.setValue(p.starter_code);
@@ -197,16 +203,12 @@ function esc(text) {
   return d.innerHTML;
 }
 
-function getCode() {
-  return editor ? editor.getValue() : '';
-}
+function getCode() { return editor ? editor.getValue() : ''; }
 
 async function runCode() {
   const btn = document.getElementById('btn-run');
   btn.disabled = true;
-  const span = btn.querySelector('span');
-  const origText = span.textContent;
-  span.textContent = 'Running…';
+  btn.textContent = 'Running…';
 
   switchPanelTab('results');
   const resultsEl = document.getElementById('results');
@@ -222,7 +224,7 @@ async function runCode() {
     });
     const data = await res.json();
     btn.disabled = false;
-    span.textContent = origText;
+    btn.textContent = 'Run';
     showTestResults(data);
   } else {
     const customCode = document.getElementById('custom-input').value;
@@ -233,7 +235,7 @@ async function runCode() {
     });
     const data = await res.json();
     btn.disabled = false;
-    span.textContent = origText;
+    btn.textContent = 'Run';
     showRunResults(data);
   }
 }
@@ -249,14 +251,14 @@ function showTestResults(data) {
     return;
   }
   if (!data.results || data.results.length === 0) {
-    summary.innerHTML = '<div class="info">No test cases. Switch to Custom to test manually.</div>';
+    summary.innerHTML = '<div class="info">No test cases defined. Switch to "Custom" mode to test manually.</div>';
     return;
   }
 
   const passed = data.results.filter(r => r.passed).length;
   const total = data.results.length;
   const allPassed = data.all_passed;
-  summary.innerHTML = '<div class="' + (allPassed ? 'pass' : 'fail') + '">' + passed + '/' + total + (allPassed ? ' passed' : ' failed') + '</div>';
+  summary.innerHTML = '<div class="' + (allPassed ? 'pass' : 'fail') + '">' + passed + '/' + total + ' tests passed</div>';
 
   body.innerHTML = data.results.map((r, i) =>
     '<div class="test-case ' + (r.passed ? 'pass' : 'fail') + '">' +
@@ -275,10 +277,7 @@ function showTestResults(data) {
 
   if (data.stdout) {
     body.innerHTML +=
-      '<details class="stdout-box">' +
-        '<summary>stdout</summary>' +
-        '<pre>' + esc(data.stdout) + '</pre>' +
-      '</details>';
+      '<details class="stdout-box"><summary>stdout</summary><pre>' + esc(data.stdout) + '</pre></details>';
   }
 }
 
@@ -292,13 +291,8 @@ function showRunResults(data) {
     summary.innerHTML = '<div class="error">' + esc(data.error) + '</div>';
     return;
   }
-
   summary.innerHTML = '<div class="pass">Execution completed</div>';
-  body.innerHTML =
-    '<div class="stdout-box" open>' +
-      '<summary style="cursor:default">Output</summary>' +
-      '<pre>' + esc(data.stdout || '(no output)') + '</pre>' +
-    '</div>';
+  body.innerHTML = '<div class="stdout-box" open><summary style="cursor:default">Output</summary><pre>' + esc(data.stdout || '(no output)') + '</pre></div>';
 }
 </script>
 </body>
